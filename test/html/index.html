@@ -60,7 +60,7 @@
 						font-size: smaller;
 					}
 	-->
-	<h1>Hello I'm <sup> 1st </sup>Peter <sub>in</sub> town here.</h1>
+	<h1>Hello I'm <sup> 1st </sup>Peter <sub>in</sub> town.</h1>
 
 
 
@@ -71,14 +71,78 @@
 	<p>I will display &copy and I will display &reg</p>
 
 	<!-- 
+		<b>  - bold character
+		<i>  - italic character
+		<br> - line brack 
+		<hr> - horizontal rule
+		<strong> - content has strong importence. By default browsers show <strong> element in bold
+		<em> - emphasis that subtly changes the meaning of a sentance. By default browsers show <em> element in italic.
 		
 	-->
 
-
+	<p>This is <b>bold</b> and this is <i>italic</i> </p>
+	<br /> 
+	<p><strong>Beware:</strong> Picpockets operate in this area.</p>
+	<p> I <em>think</em> Ivy was the first.</p>
+	<hr />
+	
 
 	<!-- 
-		
+		<blockquote> - Used for longer quotes that take up an entire paragraph.
+					   Browsers tend to indent content of <blockquote>
+
+		<q> - used for shorter quotes. Browsers are supposed to put quotes around.
 	-->
 
+	<blockquote cite="http://en.wikipedia.org/wiki/Winnie-the-Pooh"><p>Did you ever stop to think, and forget to start again?</p></blockquote>
+
+	<p>As A.A. Milne said <q>Some people talk to animals. Not many listen though. That's the problem.</q></p>
+
+	<!-- 
+	<abbr> - abbreviation
+
+	<acronym> - acronym
+
+	HTML5 uses the <abbr> element for both abbreviations and acronyms.
+	-->
+	<p> <abbr title="Professor">Prof</abbr> Stephen Hawking is a theoretical physicist and cosmologist.</p>
+
+	<p> <acronym title="National Aeronautics and Space Administration">NASA</acronym> do some crazy space stuf.</p>
+
+	<!-- 
+		<cite> - citation
+		<def> - definitation
+	-->
+	<p><cite>A Brief History of Time</cite> by Hawking has sold over ten million copies worldwide.</p>
+
+	<p>A <dfn>black hole</dfn> is a region of space from which nothing, not even light, can escape.</p>
+
+	<!-- 
+		<address> - address. browsers often display content in italic.
+	-->
+
+		<address>
+			<p><a href="mailto:contect@example.org">contect@example.org</a></p>
+			<p>658 Evergreen Township, Springfield.</p>
+		</address>
+
+	<!-- 
+		<ins> - insert, usuallu underlined
+
+		<del> - delete, usually has a line through it
+
+		<s> - strikethrough, usually be a line through the center.
+
+		Note: Older version of HTML had a <u> tag for underlined, but this is being phased out.
+	-->
+
+	<p>It was the <del>worst</del> <ins>best</ins> idea she had ever had.</p>
+
+	<p>Laptop computer:</p>
+	<p><s>Was $889</s></p>
+	<p>Now only $299</p>
+
+
 </body>
+
 </html>
