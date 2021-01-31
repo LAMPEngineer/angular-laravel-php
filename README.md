@@ -1,2 +1,2 @@
-# angular-php
-Angula PHP app
+# angular-laravel-php
+Angula Laravel PHP app
