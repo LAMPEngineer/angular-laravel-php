@@ -40,6 +40,8 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
+              "outputPath": "../../../public/assets/angular",
+              "deployUrl": "/assets/angular",
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -59,7 +61,11 @@
                   "maximumError": "4kb"
                 }
               ]
-            }
+            },
+            "dev": {
+                    "outputPath": "dist/assets/angular",
+                    "baseHref": "/assets/angular/"
+             }
           }
         },
         "serve": {
@@ -70,7 +76,10 @@
           "configurations": {
             "production": {
               "browserTarget": "angular:build:production"
-            }
+            },
+            "dev": {
+                    "browserTarget": "angular:build:dev"
+                }
           }
         },
         "extract-i18n": {
