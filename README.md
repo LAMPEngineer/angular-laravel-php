@@ -35,7 +35,7 @@ configuration
 
 
 ## app.component.html file
-    `<tr *ngFor="let mydata of data[0]">`
-      `<td>{{mydata.name}}</td>`
-      `<td>{{mydata.domain}}</td>`
-    `</tr>`
+    <tr *ngFor="let mydata of data[0]">
+      <td>{{mydata.name}}</td>
+      <td>{{mydata.domain}}</td>
+    </tr>
