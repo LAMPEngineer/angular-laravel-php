@@ -21,21 +21,21 @@ configuration
 ## app.component.ts file
 1. `import { HttpClient } from '@angular/common/http';`
 
-3. `export class AppComponent {
-  `data:any = []; 
-  constructor (private http: HttpClient) {
-  	this.http.get('http://localhost/CreateRESTfulAPIs/api/itemstore/v1/items/1').subscribe(data => {
-  		this.data.push(data);
-  		console.log(this.data);
+3. `export class AppComponent {`
+  `data:any = [];` 
+  `constructor (private http: HttpClient) {`
+  	`this.http.get('http://localhost/CreateRESTfulAPIs/api/itemstore/v1/items/1').subscribe(data => {`
+  		`this.data.push(data);`
+  		`console.log(this.data);`
 
-  	}, error => console.error(error));
-  }
-}`
+  	`}, error => console.error(error));`
+  `}`
+`}`
 
 
 
 ## app.component.html file
-    `<tr *ngFor="let mydata of data[0]">
-      <td>{{mydata.name}}</td>
-      <td>{{mydata.domain}}</td>
-    </tr>`
+    `<tr *ngFor="let mydata of data[0]">`
+      `<td>{{mydata.name}}</td>`
+      `<td>{{mydata.domain}}</td>`
+    `</tr>`
