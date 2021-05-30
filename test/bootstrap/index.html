@@ -10,6 +10,7 @@
 
 
     <!-- My Style -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
@@ -34,15 +35,63 @@
 		        </button>
 		      </div>
 		      <div class="modal-body">
-		        ...
+		        <div class="w3-container w3-blue w3-card">
+				  <h2>Input Form</h2>
+				</div>
+					<form class="w3-container w3-card">
+						  <p>
+						  <label>First Name</label>
+						  <input class="w3-input" type="text" id="first_name"></p>
+						  <p>
+						  <label>Last Name</label>
+						  <input class="w3-input" type="text" id="last_name"></p>
+						  <p>
+						  <label>Email</label>
+						  <input class="w3-input" type="text" id="email"></p>
+						  <P><button type="button" class="w3-btn w3-blue" id="save">Save</button>
+						<closeform></closeform>
+					</form>
 		      </div>
 		      <div class="modal-footer">
 		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-		        <button type="button" class="btn btn-primary">Understood</button>
+		        <button type="button" class="btn btn-primary">Submit</button>
 		      </div>
 		    </div>
 		  </div>
 		</div>
 
+		
+			<table class="w3-table-all" id="myTable">
+				<thead>
+					<tr class="w3-blue">
+						<th nowrap>Sl.No</th>      
+						<th nowrap>First Name</th>      
+						<th nowrap>Last name</th>
+						<th nowrap>Email</th>
+						<th nowrap>Action</th>
+					</tr>
+				</thead>
+				<tbody >
+				</tbody>
+			</table>
+		
+
+	<script type="text/javascript">
+		$('#save').on('click', function() {
+		var first_name=$('#first_name').val();
+		var last_name=$('#last_name').val();
+		var email=$('#email').val();
+		var count = $('#myTable tr').length;
+		if(first_name!="" && last_name !="" && email!=""){
+		$('#myTable tbody').append('<tr class="child"><td>'+count+'</td><td>'+first_name+'</td><td>'+last_name+'</td><td>'+email+'</td><td><a href="javascript:void(0);" class="remCF1 btn btn-small btn-danger">Remove</a></td></tr>');
+		}
+		});
+		$(document).on('click','.remCF1',function(){
+		$(this).parent().parent().remoremCF1ve();
+		$('#myTable tbody tr').each(function(i){            
+		 $($(this).find('td')[0]).html(i+1);          
+		});
+		});
+	</script>
   </body>
 </html>
