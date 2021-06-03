@@ -14,7 +14,11 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-
+<style type="text/css">
+	.clsDatePicker {
+			    z-index: 100000;
+			}
+</style>
 <title>Bootstrap</title>
   </head>
   <body>
@@ -45,7 +49,13 @@
 						  <p>
 						  <label>Email</label>
 						  <input class="w3-input" type="text" id="email"></p>
+						  <label>Date</label>
+						   <input type="text" name="idTourDateDetails" id="idTourDateDetails" readonly="readonly" class="form-control clsDatePicker"> <span class="input-group-addon"><i id="calIconTourDateDetails" class="glyphicon glyphicon-th"></i></span>
 						  <!--<P><button type="button" class="w3-btn w3-blue" id="save">Save</button>-->
+
+
+						 <input type="text" name="idTourDateDetailsHidden" id="idTourDateDetailsHidden">
+
 						<closeform></closeform>
 					</form>
 			
@@ -90,6 +100,15 @@
 		 $($(this).find('td')[0]).html(i+1);          
 		});
 		});
+
+		 $('#idTourDateDetails').datepicker({
+		     dateFormat: 'dd-mm-yy',
+		     minDate: '+5d',
+		     changeMonth: true,
+		     changeYear: true,
+		     altField: "#idTourDateDetailsHidden",
+		     altFormat: "yy-mm-dd"
+		 });
 	</script>
   </body>
 </html>
