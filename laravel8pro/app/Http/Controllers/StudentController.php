@@ -9,7 +9,18 @@ class StudentController extends Controller
 {
     public function index()
     {
-    	$student = Student::orderBy('id','DESC')->get();
+    	$students = Student::orderBy('id','DESC')->get();
     	return view('students', compact('students'));
+    }
+
+    public function addStudent(Request $request)
+    {
+    	$student = new Student();
+    	$student->firstname = $request->firstname;
+    	$student->lastname = $request->lastname;
+    	$student->email = $request->email;
+    	$student->phone = $request->phone;
+    	$student->save();
+    	return response()->json($student);
     }
 }
