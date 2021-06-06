@@ -7,8 +7,17 @@
 	<title>Sudents</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
-
+	
+    <!-- BootStrap DatePicker JS -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"
+    ></script>
+    <!-- BootStrap DatePicker CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
+    />
 </head>
 <body>
 	<section style="padding-top:60px;">
@@ -74,6 +83,11 @@
         		<label for="phone">Phone</label>
         		<input type="text" class="form-control" id="phone">
         	</div>
+        	<div class="form-group date fj-date">
+        		<label for="dob">Date of Birth</label>
+        		<input type="text" class="form-control" id="dob"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+        	</div>
+
         	<button type="submit" class="btn btn-primary">Submit</button>
         </form>
       </div>
@@ -116,9 +130,17 @@
 		    });
 
 		});	
-	</script>
-	
+
+
+
+		$( document ).ready(function() {
+			$('.fj-date').datepicker({
+			    format: "mm//dd/yyyy"
+			});
+		});
+	</script>	
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
 </body>
 </html>
