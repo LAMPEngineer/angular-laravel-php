@@ -87,6 +87,10 @@
         		<label for="dob">Date of Birth</label>
         		<input type="text" class="form-control" id="dob"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
         	</div>
+        	<div class="form-group">
+        		<label for="picture">Picture</label>
+        		<input type="file" class="form-control" id="picture">
+        	</div>
 
         	<button type="submit" class="btn btn-primary">Submit</button>
         </form>
