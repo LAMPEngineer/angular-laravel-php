@@ -36,6 +36,8 @@
 										<th>Last Name</th>
 										<th>Email</th>
 										<th>Phone</th>
+										<th>Picture</th>
+
 									</tr>
 								</thead>
 								<tbody>
@@ -45,6 +47,8 @@
 										<td>{{$student->lastname}}</td>
 										<td>{{$student->email}}</td>
 										<td>{{$student->phone}}</td>
+										<td>{{$student->picture}}</td>
+
 									</tr>
 									@endforeach
 								</tbody>
@@ -112,21 +116,25 @@
 		    let phone = $("#phone").val();
 		    let _token = $("input[name=_token]").val();
 
+            let formData = new FormData();
+            formData.append('picture', $("#picture"[0].files[0]); 
+            formData.append('firstname', firstname);
+            formData.append('lastname', lastname);
+            formData.append('email', email);
+            formData.append('phone', phone);
+            formData.append('_token', _token);
+
+
+
 		    $.ajax({
 		    	url:"{{route('student.name')}}",
 		    	type:"POST",
-		    	data:{
-		    		firstname:firstname,
-		    		lastname:lastname,
-		    		email:email,
-		    		phone:phone,
-		    		_token:_token
-		    	},
+		    	data:formData,
 		    	success:function(response)
 		    	{
 		    		if(response)
 		    		{
-		    			$("#studentTable tbody").prepend('<tr><td>'+response.firstname+'</td><td>'+response.lastname+'</td><td>'+response.email+'</td><td>'+response.phone+'</td></tr>');
+		    			$("#studentTable tbody").prepend('<tr><td>'+response.firstname+'</td><td>'+response.lastname+'</td><td>'+response.email+'</td><td>'+response.phone+'</td><td>'+response.picture+'</td></tr>');
 		    			$("#studentForm")[0].reset();
 		    			$("#studentModal").modal('hide');
 		    		}
