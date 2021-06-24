@@ -15,6 +15,14 @@ class StudentController extends Controller
 
     public function addStudent(Request $request)
     {
+        $validated = $request->validate([
+            'firstname' => 'required',
+            'lastname'  => 'required',
+            'email'     => 'required',
+            'phone'     => 'required'
+
+        ]);
+
     	$student = new Student();
     	$student->firstname = $request->firstname;
     	$student->lastname = $request->lastname;

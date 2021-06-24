@@ -36,7 +36,7 @@
 										<th>Last Name</th>
 										<th>Email</th>
 										<th>Phone</th>
-										<th>Picture</th>
+										<!--<th>Picture</th>-->
 
 									</tr>
 								</thead>
@@ -47,7 +47,7 @@
 										<td>{{$student->lastname}}</td>
 										<td>{{$student->email}}</td>
 										<td>{{$student->phone}}</td>
-										<td>{{$student->picture}}</td>
+										<!--<td>{{$student->picture}}</td>-->
 
 									</tr>
 									@endforeach
@@ -87,14 +87,14 @@
         		<label for="phone">Phone</label>
         		<input type="text" class="form-control" id="phone">
         	</div>
-        	<div class="form-group date fj-date">
+        	<!--<div class="form-group date fj-date">
         		<label for="dob">Date of Birth</label>
         		<input type="text" class="form-control" id="dob"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
         	</div>
         	<div class="form-group">
         		<label for="picture">Picture</label>
         		<input type="file" class="form-control" id="picture">
-        	</div>
+        	</div>-->
 
         	<button type="submit" class="btn btn-primary">Submit</button>
         </form>
@@ -117,7 +117,7 @@
 		    let _token = $("input[name=_token]").val();
 
             let formData = new FormData();
-            formData.append('picture', $("#picture"[0].files[0]); 
+            //formData.append('picture', $("#picture"[0].files[0]); 
             formData.append('firstname', firstname);
             formData.append('lastname', lastname);
             formData.append('email', email);
@@ -130,15 +130,30 @@
 		    	url:"{{route('student.name')}}",
 		    	type:"POST",
 		    	data:formData,
+		    	cache: false,
+		    	processData: false,
+		    	contentType: false,
 		    	success:function(response)
 		    	{
 		    		if(response)
 		    		{
-		    			$("#studentTable tbody").prepend('<tr><td>'+response.firstname+'</td><td>'+response.lastname+'</td><td>'+response.email+'</td><td>'+response.phone+'</td><td>'+response.picture+'</td></tr>');
+		    			$("#studentTable tbody").prepend('<tr><td>'+response.firstname+'</td><td>'+response.lastname+'</td><td>'+response.email+'</td><td>'+response.phone+'</td></tr>');
 		    			$("#studentForm")[0].reset();
 		    			$("#studentModal").modal('hide');
 		    		}
+		    	},
+		    	error: function(err){
+		    		if(err.status == 422){
+		    			console.log(err.responseJSON);
+		    			console.warn(err.responseJSON.errors);
+		    			$.each(err.responseJSON.errors, function(i, error){
+		    				var el = $(document).find('[id="'+i+'"]');
+		    				el.after($('<span style="color: red;">'+error[0]+'</span>'));
+		    			});
+
+		    		}
 		    	}
+
 		    });
 
 		});	
