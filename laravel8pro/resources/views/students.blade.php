@@ -133,6 +133,9 @@
 		    	cache: false,
 		    	processData: false,
 		    	contentType: false,
+		    	beforeSend: function(){
+		    		$(document).find('span.error-text').text('');
+		    	},
 		    	success:function(response)
 		    	{
 		    		if(response)
@@ -148,7 +151,7 @@
 		    			console.warn(err.responseJSON.errors);
 		    			$.each(err.responseJSON.errors, function(i, error){
 		    				var el = $(document).find('[id="'+i+'"]');
-		    				el.after($('<span style="color: red;">'+error[0]+'</span>'));
+		    				el.after($('<span class="text-danger error-text">'+error[0]+'</span>'));
 		    			});
 
 		    		}
