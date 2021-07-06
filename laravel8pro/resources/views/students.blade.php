@@ -36,7 +36,7 @@
 										<th>Last Name</th>
 										<th>Email</th>
 										<th>Phone</th>
-										<!--<th>Picture</th>-->
+										<th>Action</th>
 
 									</tr>
 								</thead>
@@ -47,7 +47,10 @@
 										<td>{{$student->lastname}}</td>
 										<td>{{$student->email}}</td>
 										<td>{{$student->phone}}</td>
-										<!--<td>{{$student->picture}}</td>-->
+										<td>
+											<a href="#" class="btn btn-success editbtn" data-bs-toggle="modal" data-bs-target="#editStudentModal">Edit</a>
+											<!-- <button type="button" class="btn btn-success editbtn" data-bs-toggle="modal" data-bs-target="#edidsStudentModal">Edit</button> -->
+										</td>
 
 									</tr>
 									@endforeach
@@ -61,6 +64,8 @@
 	</section>
 
 <!-- Modal -->
+<!--######################### add popup form ###########################-->
+
 <div class="modal fade" id="studentModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -106,7 +111,82 @@
     </div>
   </div>
 </div>
+
+<!--######################### edit popup form ###########################-->
+
+<div class="modal fade" id="editStudentModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Edit A Student</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="studentForm">
+        	@csrf
+        	<div class="form-group">
+        		<label for="firstname">First Name</label>
+        		<input type="text" class="form-control" id="firstname_e">
+        	</div>
+        	<div class="form-group">
+        		<label for="lastname">Last Name</label>
+        		<input type="text" class="form-control" id="lastname_e">
+        	</div>
+        	<div class="form-group">
+        		<label for="email">Email</label>
+        		<input type="text" class="form-control" id="email_e">
+        	</div>
+        	<div class="form-group">
+        		<label for="phone">Phone</label>
+        		<input type="text" class="form-control" id="phone_e">
+        	</div>
+        	<!--<div class="form-group date fj-date">
+        		<label for="dob">Date of Birth</label>
+        		<input type="text" class="form-control" id="dob"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+        	</div>
+        	<div class="form-group">
+        		<label for="picture">Picture</label>
+        		<input type="file" class="form-control" id="picture">
+        	</div>-->
+
+        	<button type="submit" class="btn btn-primary">Update</button>
+        </form>
+      </div>
+      <!--<div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>-->
+    </div>
+  </div>
+</div>
+
+
+<!--#####################################################################-->
+	
 	<script>
+
+	$(document).ready(function(){
+		$('.editbtn').on('click', function(){
+			$('editStudentModal').modal('show');
+
+			$tr = $(this).closest('tr');
+
+			var data = $tr.children("td").map(function(){
+				return $(this).text();
+			}).get();
+
+			console.log('Data= '+data);
+
+			//$('#update_id').val(data[0]);
+			$('#firstname_e').val(data[0]);
+			$('#lastname_e').val(data[1]);
+			$('#email_e').val(data[2]);
+			$('#phone_e').val(data[3]);
+
+
+		});
+	});
+
 		$("#studentForm").submit(function(e){
 			e.preventDefault();
 
