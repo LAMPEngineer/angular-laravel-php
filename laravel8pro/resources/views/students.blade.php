@@ -134,7 +134,7 @@
 		    	processData: false,
 		    	contentType: false,
 		    	beforeSend: function(){
-		    		$(document).find('span.error-text').text('');
+		    		$(document).find('span.text-danger error-text').text('');
 		    	},
 		    	success:function(response)
 		    	{
