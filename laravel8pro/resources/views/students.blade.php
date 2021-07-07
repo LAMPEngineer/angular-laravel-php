@@ -48,7 +48,7 @@
 										<td>{{$student->email}}</td>
 										<td>{{$student->phone}}</td>
 										<td>
-											<a href="#" class="btn btn-success editbtn" data-bs-toggle="modal" data-bs-target="#editStudentModal">Edit</a>
+											<a href="#" class="btn btn-success editbtn" data-bs-toggle="modal" data-bs-target="#studentModal">Edit</a>
 											<!-- <button type="button" class="btn btn-success editbtn" data-bs-toggle="modal" data-bs-target="#edidsStudentModal">Edit</button> -->
 										</td>
 
@@ -167,7 +167,7 @@
 
 	$(document).ready(function(){
 		$('.editbtn').on('click', function(){
-			$('editStudentModal').modal('show');
+			$('studentModal').modal('show');
 
 			$tr = $(this).closest('tr');
 
@@ -178,10 +178,10 @@
 			console.log('Data= '+data);
 
 			//$('#update_id').val(data[0]);
-			$('#firstname_e').val(data[0]);
-			$('#lastname_e').val(data[1]);
-			$('#email_e').val(data[2]);
-			$('#phone_e').val(data[3]);
+			$('#firstname').val(data[0]);
+			$('#lastname').val(data[1]);
+			$('#email').val(data[2]);
+			$('#phone').val(data[3]);
 
 
 		});
