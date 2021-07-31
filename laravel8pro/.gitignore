@@ -3,10 +3,10 @@
 /public/storage
 /storage/*.key
 /vendor
-.env
-.env.backup
+package-lock.json
+.env*
+composer.lock
 .phpunit.result.cache
-.gitignore
 docker-compose.override.yml
 Homestead.json
 Homestead.yaml
