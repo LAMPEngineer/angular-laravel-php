@@ -49,7 +49,7 @@
 										<td>{{$student->phone}}</td>
 										<td>
 											<a href="#" class="btn btn-success editbtn" data-bs-toggle="modal" data-bs-target="#studentModal">Edit</a>
-											<!-- <button type="button" class="btn btn-success editbtn" data-bs-toggle="modal" data-bs-target="#edidsStudentModal">Edit</button> -->
+											<!-- <button type="button" class="btn btn-success editbtn" data-bs-toggle="modal" data-bs-target="#editStudentModal">Edit</button> -->
 										</td>
 
 									</tr>
