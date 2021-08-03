@@ -122,7 +122,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form id="studentForm">
+        <form id="editStudentForm">
         	@csrf
         	<div class="form-group">
         		<label for="firstname">First Name</label>
@@ -162,10 +162,11 @@
 
 
 <!--#####################################################################-->
-	
+@push('scripts')
 	<script>
 
 	$(document).ready(function(){
+
 		$('.editbtn').on('click', function(){
 			$('studentModal').modal('show');
 
@@ -251,6 +252,7 @@
 	</script>	
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+@endpush
 
 </body>
 </html>
