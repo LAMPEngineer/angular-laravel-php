@@ -7,12 +7,32 @@ use Illuminate\Http\Request;
 
 class StudentController extends Controller
 {
+
+
+
+/**
+ *  To list student record
+ * 
+ * 
+ * 
+ * @return array 
+ * 
+ */ 
     public function index()
     {
     	$students = Student::orderBy('id','DESC')->get();
     	return view('students', compact('students'));
     }
 
+
+/**
+ *  To add student record
+ * 
+ * @param $request Request
+ * 
+ * @return json response
+ * 
+ */ 
     public function addStudent(Request $request)
     {
         $validated = $request->validate([
@@ -31,4 +51,23 @@ class StudentController extends Controller
     	$student->save();
     	return response()->json($student);
     }
+
+
+
+/**
+ *  To edit student record
+ * 
+ * @param $request Request
+ * 
+ * @return json response
+ * 
+ */ 
+    public function editStudent(Request $request)
+    {
+
+
+    }
+
+
+
 }
