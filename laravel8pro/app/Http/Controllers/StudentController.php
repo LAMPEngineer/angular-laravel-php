@@ -62,14 +62,30 @@ class StudentController extends Controller
  * @return json response
  * 
  */ 
-    public function editStudent(Request $request)
+    public function editStudent()
     {
 
+      echo "Hi............";
+
+      $request->id =2;
+
       $student = Student::find($request->id);
+
+
+
+
       if($student)
       {
+          echo "<pre>";
+          print_r($student);
+          echo "</pre>";
+          die();
+
          return response()->json($student);
       }else{
+
+            echo "Not found";
+            die();
          return response()->json([
             'message' => 'Student Not Found'
          ]);

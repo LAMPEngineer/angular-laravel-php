@@ -23,3 +23,6 @@ Route::get('/students', [StudentController::class, 'index']);
 
 Route::post('/add-student', [StudentController::class, 'addStudent'])->name('student.name');
 
+//Route::get('/edit-student', [StudentController::class, 'editStudent']);
+
+Route::get('/edit-student', 'StudentController@editStudent')->name('edit-student');
