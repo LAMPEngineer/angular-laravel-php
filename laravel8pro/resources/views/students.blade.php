@@ -48,7 +48,7 @@
 										<td>{{$student->email}}</td>
 										<td>{{$student->phone}}</td>
 										<td>
-											<a href="#" class="btn btn-success editbtn" data-bs-toggle="modal" data-bs-target="#studentModal">Edit</a>
+											<a href="#" class="btn btn-success editbtn" data-bs-toggle="modal" data-bs-target="#editStudentModal">Edit</a>
 											<!-- <button type="button" class="btn btn-success editbtn" data-bs-toggle="modal" data-bs-target="#editStudentModal">Edit</button> -->
 										</td>
 
@@ -162,13 +162,13 @@
 
 
 <!--#####################################################################-->
-@push('scripts')
+
 	<script>
 
 	$(document).ready(function(){
 
 		$('.editbtn').on('click', function(){
-			$('studentModal').modal('show');
+			$('editStudentModal').modal('show');
 
 			$tr = $(this).closest('tr');
 
@@ -179,10 +179,10 @@
 			console.log('Data= '+data);
 
 			//$('#update_id').val(data[0]);
-			$('#firstname').val(data[0]);
-			$('#lastname').val(data[1]);
-			$('#email').val(data[2]);
-			$('#phone').val(data[3]);
+			$('#firstname_e').val(data[0]);
+			$('#lastname_e').val(data[1]);
+			$('#email_e').val(data[2]);
+			$('#phone_e').val(data[3]);
 
 
 		});
@@ -219,12 +219,18 @@
 		    	},
 		    	success:function(response)
 		    	{
-		    		if(response)
+		    			console.log(response);
+				    	$("#studentForm")[0].reset();
+		          $("#studentModal").modal('hide');
+		          location.reload();
+
+/*		    		if(response)
 		    		{
 		    			$("#studentTable tbody").prepend('<tr><td>'+response.firstname+'</td><td>'+response.lastname+'</td><td>'+response.email+'</td><td>'+response.phone+'</td></tr>');
 		    			$("#studentForm")[0].reset();
 		    			$("#studentModal").modal('hide');
 		    		}
+*/		    		
 		    	},
 		    	error: function(err){
 		    		if(err.status == 422){
@@ -252,7 +258,7 @@
 	</script>	
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-@endpush
+
 
 </body>
 </html>
