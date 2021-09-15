@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Student;
 use Illuminate\Http\Request;
+use App\Classes\MyString;
 
 class StudentController extends Controller
 {
@@ -18,8 +19,13 @@ class StudentController extends Controller
  * @return array 
  * 
  */ 
-    public function index()
+    public function index(MyString $mystring)
     {
+        $text = "This is a slugify test";
+        $text_slugify = $mystring->slugify($text);
+
+        ddd($text_slugify);
+
     	$students = Student::orderBy('id','DESC')->get();
     	return view('students', compact('students'));
     }
