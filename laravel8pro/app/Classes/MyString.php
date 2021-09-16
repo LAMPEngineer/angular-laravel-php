@@ -3,8 +3,19 @@
 namespace App\Classes;
 
 
+use App\Classes\Redis;
+
 class MyString
 {
+	protected $redis;
+
+	public function __construct(Redis $redis){
+
+		$this->redis = $redis;
+
+	}
+
+
 	// Function to convert string into slug format
 	public function slugify($text)
 	{
