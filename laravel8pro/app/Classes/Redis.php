@@ -10,5 +10,10 @@ class Redis
 
 	}
 
+	public function hello()
+	{
+		return "Hi....This is a slugify test";
+	}
+
 		
 }

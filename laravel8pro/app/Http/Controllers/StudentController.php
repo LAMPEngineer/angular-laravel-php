@@ -21,8 +21,8 @@ class StudentController extends Controller
  */ 
     public function index(MyString $mystring)
     {
-        $text = "This is a slugify test";
-        $text_slugify = $mystring->slugify($text);
+        //$text = "This is a slugify test";
+        $text_slugify = $mystring->slugify();
 
         ddd($text_slugify);
 

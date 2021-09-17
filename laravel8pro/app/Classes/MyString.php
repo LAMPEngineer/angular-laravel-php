@@ -9,16 +9,21 @@ class MyString
 {
 	protected $redis;
 
-	public function __construct(Redis $redis){
+
+	public function __construct(Redis $redis)
+	{
 
 		$this->redis = $redis;
+
 
 	}
 
 
 	// Function to convert string into slug format
-	public function slugify($text)
+	public function slugify()
 	{
+		$text = $this->redis->hello();
+
 		//replace non letter or digit by ~
 		$text = preg_replace('~[^\pL\d]+~u', '-', $text);
 
