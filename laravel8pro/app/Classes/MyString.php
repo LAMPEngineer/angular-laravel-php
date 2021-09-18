@@ -20,10 +20,9 @@ class MyString
 
 
 	// Function to convert string into slug format
-	public function slugify()
+	public function slugify($text): String
 	{
-		$text = $this->redis->hello();
-
+		
 		//replace non letter or digit by ~
 		$text = preg_replace('~[^\pL\d]+~u', '-', $text);
 
@@ -43,10 +42,10 @@ class MyString
 		$text = strtolower($text);
 
 		if(empty($text)){
-			echo 'n-a';
+			return 'n-a';
 		}
 
-		echo $text;
+		return $text;
 
 	}
 	

@@ -21,12 +21,13 @@ class StudentController extends Controller
  */ 
     public function index(MyString $mystring)
     {
-        //$text = "This is a slugify test";
-        $text_slugify = $mystring->slugify();
-
-        ddd($text_slugify);
-
     	$students = Student::orderBy('id','DESC')->get();
+
+        foreach($students as $student){
+            $student->email = $mystring->slugify($student->email);
+        }
+        
+
     	return view('students', compact('students'));
     }
 
