@@ -24,7 +24,7 @@ class StudentController extends Controller
     	$students = Student::orderBy('id','DESC')->get();
 
         foreach($students as $student){
-            $student->email = $mystring->slugify($student->email);
+            $student->slugify = $mystring->slugify($student->email);
         }
         
 

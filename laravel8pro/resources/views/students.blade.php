@@ -35,6 +35,7 @@
 										<th>First Name</th>
 										<th>Last Name</th>
 										<th>Email</th>
+										<th>Slugify</th>
 										<th>Phone</th>
 										<th>Action</th>
 
@@ -46,6 +47,7 @@
 										<td>{{$student->firstname}}</td>
 										<td>{{$student->lastname}}</td>
 										<td>{{$student->email}}</td>
+										<td>{{$student->slugify}}</td>
 										<td>{{$student->phone}}</td>
 										<td>
 											<a href="#" class="btn btn-success editbtn" data-bs-toggle="modal" data-bs-target="#editStudentModal">Edit</a>
