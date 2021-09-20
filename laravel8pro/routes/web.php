@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 /**
  *  Service Container - Bind
  */
-App::bind('App\Billing\Stripe', function(){
+App::singleton('App\Billing\Stripe', function(){
     return new \App\Billing\Stripe(config('services.stripe.secret'));
 });
 
@@ -32,6 +32,10 @@ App::bind('App\Billing\Stripe', function(){
 //$stripe = app::make('App\Billing\Stripe');
 
 $stripe = resolve('App\Billing\Stripe');
+
+$stripe1 = resolve('App\Billing\Stripe');
+
+$stripe2 = resolve('App\Billing\Stripe');
 
 
 
