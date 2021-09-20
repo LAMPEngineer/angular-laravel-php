@@ -29,5 +29,14 @@ return [
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
+    'stripe' => [
+        'model' => App\User::class,
+        'key' => env('STRIPE_KEY'),
+        'secret' => env('STRIPE_SECRET'),
+        'webhook' => [
+          'secret' => env('STRIPE_WEBHOOK_SECRET'),
+          'tolerance' => env('STRIPE_WEBHOOK_TOLERANCE', 300),
+        ],
+  ],
 
 ];
