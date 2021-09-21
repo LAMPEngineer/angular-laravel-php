@@ -33,12 +33,6 @@ App::singleton('App\Billing\Stripe', function(){
 
 $stripe = resolve('App\Billing\Stripe');
 
-$stripe1 = resolve('App\Billing\Stripe');
-
-$stripe2 = resolve('App\Billing\Stripe');
-
-
-
 
 ddd($stripe);
 

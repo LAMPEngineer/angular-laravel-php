@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use App\Classes\MyString;
+use App\Billing\Stripe;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -18,6 +19,11 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind('mylibrary', function($app){
             return new MyString;
         });
+
+        $this->app->singleton(Stripe::class, function(){
+            return new Stripe(config('services.stripe.secret'));
+        });
+
     }
 
     /**
