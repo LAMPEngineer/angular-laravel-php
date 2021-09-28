@@ -21,6 +21,13 @@ class StudentController extends Controller
  */ 
     public function index(MyString $mystring)
     {
+        // use service provider to get stripe object
+        $stripe = \App::make('App\Billing\Stripe');
+
+
+        ddd($stripe);
+
+
     	$students = Student::orderBy('id','DESC')->get();
 
         foreach($students as $student){
