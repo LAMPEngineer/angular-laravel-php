@@ -18,10 +18,10 @@ use Illuminate\Support\Facades\Route;
 /**
  *  Service Container - Bind
  */
-App::bind('App\Billing\Stripe', function(){
+/*App::bind('App\Billing\Stripe', function(){
     return new \App\Billing\Stripe(config('services.stripe.secret'));
 });
-
+*/
 
 
 
