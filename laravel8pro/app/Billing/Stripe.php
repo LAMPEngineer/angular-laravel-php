@@ -12,4 +12,9 @@
 		{
 			$this->key = $key;
 		}
+
+		public function getKey()
+		{
+			return $this->key;
+		}
 	}

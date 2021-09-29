@@ -24,9 +24,8 @@ class StudentController extends Controller
         // use service provider to get stripe object
         $stripe = \App::make('App\Billing\Stripe');
 
-
-        ddd($stripe);
-
+        echo "Key= ".$stripe->getKey();
+        
 
     	$students = Student::orderBy('id','DESC')->get();
 
