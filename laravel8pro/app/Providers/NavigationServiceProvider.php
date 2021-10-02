@@ -23,6 +23,11 @@ class NavigationServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        view()->composer('*', function($view){
+
+            $test = 'My Test';
+            
+            return $view->with('test', $test);
+        });
     }
 }
