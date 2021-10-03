@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use App\Page;
 
 class NavigationServiceProvider extends ServiceProvider
 {
@@ -25,9 +26,13 @@ class NavigationServiceProvider extends ServiceProvider
     {
         view()->composer('*', function($view){
 
-            $test = 'My Test';
+            //$test = 'My Test';
+            $pages = Page::all();
             
-            return $view->with('test', $test);
+            
+            //return $view->with('test', $test);
+            return $view->with('pages', $pages);
+
         });
     }
 }
