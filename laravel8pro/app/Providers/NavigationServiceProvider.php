@@ -3,7 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use App\Page;
+use App\Classes\Page;
 
 class NavigationServiceProvider extends ServiceProvider
 {
