@@ -10,7 +10,11 @@ namespace App\Classes;
 
 		public static function all()
 		{
-			$pages = array();
+			$contents = array('blog','about','contact');
+			foreach ($contents as $key => $content) {
+				$pages[$key]['title'] = ucfirst($content). ' Page';
+				$pages[$key]['slug'] = $content;
+			}
 
 			return $pages;
 		}
