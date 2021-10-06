@@ -48,11 +48,10 @@
                     <a href="/">Home</a>
 
                     @foreach($pages as $page)
-
+                    
                     <a href="/{{$page['slug']}}">{{$page['title']}}</a>
 
                     @endforeach
-                    
                 </div>
                 <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                     <div class="grid grid-cols-1 md:grid-cols-2">
