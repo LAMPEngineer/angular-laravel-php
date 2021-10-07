@@ -1,5 +1,5 @@
-# angular-laravel-php
-Angula Laravel PHP app
+# angular-laravel 8-php 8
+Angula + Laravel 8.0 + PHP 8.0
 
 # Setup Laravel With Angular 
 There are two ways:
