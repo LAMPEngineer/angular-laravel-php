@@ -8,6 +8,9 @@ Angula 11.0 + Laravel 8.0 + PHP 8.0
 3. Upgrade npm `v3`
 4. Install Laravel `v8` 
 
+# Setup Angular 
+1. Install Angular `v11`
+2. Install Node `10.19`
 
 # Setup Laravel With Angular 
 There are two ways:
