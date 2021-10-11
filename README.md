@@ -1,5 +1,5 @@
 # angular-laravel 8-php 8
-Angula + Laravel 8.0 + PHP 8.0
+Angula 11.0 + Laravel 8.0 + PHP 8.0
 
 
 # Setup Laravel 8 With PHP 8
@@ -7,6 +7,7 @@ Angula + Laravel 8.0 + PHP 8.0
 2. Upgrade Composer `v2`
 3. Upgrade npm `v3`
 4. Install Laravel `v8` 
+
 
 # Setup Laravel With Angular 
 There are two ways:
