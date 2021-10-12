@@ -12,7 +12,7 @@ Angula 11.0 + Laravel 8.0 + PHP 8.0
 1. Install Angular `v11`
 2. Install Node `10.19`
 
-# Setup Laravel With Angular 
+# Configure Laravel With Angular 
 There are two ways:
 1. Keep Angular and Laravel in the same repository
 2. Keep frontend (Angular or React or Vue) and backend (Laravel) in seperate reposetory - communicate with RESTful API
