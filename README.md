@@ -1,4 +1,4 @@
-# Angular-Laravel 8-PHP 8
+# Angular 11-Laravel 8-PHP 8
 Angula 11.0 + Laravel 8.0 + PHP 8.0
 
 
