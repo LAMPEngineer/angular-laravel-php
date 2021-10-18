@@ -18,9 +18,10 @@ There are two ways:
 2. Keep frontend (Angular or React or Vue) and backend (Laravel) in seperate reposetory - communicate with RESTful API
 
 # Keep Angular and Laravel together
-
+ - in same repository
 # Backend API call from Angular
-configuration
+ - in seperate reposetory 
+
 
 ## app.module.ts file
 1. `import { HttpClientModule } from '@angular/common/http';`
