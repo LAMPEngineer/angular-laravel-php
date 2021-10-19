@@ -20,7 +20,7 @@ There are two ways:
 # Keep Angular and Laravel together
  - in same repository
 # Backend API call from Angular
- - in seperate reposetory 
+ - in seperate reposetory (Frontend & Backend)
 
 
 ## app.module.ts file
