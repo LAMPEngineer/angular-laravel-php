@@ -18,9 +18,9 @@ There are two ways:
 2. Keep frontend (Angular or React or Vue) and backend (Laravel) in seperate reposetory - communicate with RESTful API
 
 # Keep Angular and Laravel together
- - in same repository
+ - In same repository
 # Backend API call from Angular
- - in seperate reposetory (Frontend & Backend)
+ - In seperate reposetory (Frontend & Backend)
 
 
 ## app.module.ts file
