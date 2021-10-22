@@ -64,6 +64,6 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 ## Laravel : Architecture
 
 - Architecture 1
-- Architecture 2
+- **[Service Container](https://laravel.com/docs/8.x/container)**
 - Architecture 3
 
