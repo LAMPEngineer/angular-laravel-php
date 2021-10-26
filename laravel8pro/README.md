@@ -61,7 +61,7 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 - **[Request Lifecycle](https://laravel.com/docs/8.x/lifecycle)**
 - **[Service Container](https://laravel.com/docs/8.x/container)**
-- 
+-  **[Request Lifecycle](https://laravel.com/docs/8.x/lifecycle)**
 
 ## License
 
