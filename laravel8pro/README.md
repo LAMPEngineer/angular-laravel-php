@@ -35,6 +35,18 @@ If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Lar
 - **[Service Providers](https://laravel.com/docs/8.x/providers)**
 - **[Facades](https://laravel.com/docs/8.x/facades)**
 
+## Packages
+- **[Breeze](https://laravel.com/docs/8.x/starter-kits#laravel-breeze)**
+- **[Cashier](https://laravel.com/docs/8.x/billing)**
+- **[Dusk](https://laravel.com/docs/8.x/dusk)**
+- **[]()**
+- **[]()**
+- **[]()**
+- **[]()**
+- **[]()**
+- **[]()**
+
+
 
 ## Laravel Sponsors
 
