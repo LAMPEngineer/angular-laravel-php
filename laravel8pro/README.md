@@ -39,8 +39,8 @@ If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Lar
 - **[Breeze](https://laravel.com/docs/8.x/starter-kits#laravel-breeze)**
 - **[Cashier](https://laravel.com/docs/8.x/billing)**
 - **[Dusk](https://laravel.com/docs/8.x/dusk)**
-- **[]()**
-- **[]()**
+- **[Envoy](https://laravel.com/docs/8.x/envoy)**
+- **[Fortify](https://laravel.com/docs/8.x/fortify)**
 - **[]()**
 - **[]()**
 - **[]()**
