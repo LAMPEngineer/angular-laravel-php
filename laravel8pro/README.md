@@ -42,10 +42,10 @@ If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Lar
 - **[Envoy](https://laravel.com/docs/8.x/envoy)**
 - **[Fortify](https://laravel.com/docs/8.x/fortify)**
 - **[Homestead](https://laravel.com/docs/8.x/homestead)**
-- **[Passport](https://laravel.com/docs/8.x/passport)**
 
 ## Eco-system
 - **[Lumen](https://lumen.laravel.com/)**
+- **[Passport](https://laravel.com/docs/8.x/passport)**
 - **[]()**
 - **[]()**
 - **[]()**
