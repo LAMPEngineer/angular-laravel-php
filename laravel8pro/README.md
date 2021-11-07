@@ -42,12 +42,12 @@ If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Lar
 - **[Envoy](https://laravel.com/docs/8.x/envoy)**
 - **[Fortify](https://laravel.com/docs/8.x/fortify)**
 - **[Homestead](https://laravel.com/docs/8.x/homestead)**
+- **[Passport](https://laravel.com/docs/8.x/passport)**
 
 ## The Laravel Ecosystem
-- **[Lumen](https://lumen.laravel.com/)**
-- **[Passport](https://laravel.com/docs/8.x/passport)**
+- **[Lumen](https://lumen.laravel.com/)** : The stunningly fast micro-framework by Laravel
 - **[Vapor](https://vapor.laravel.com/)** : Serverless deployment platform for Laravel
-- **[]()**
+- **[Forge](https://forge.laravel.com/)** : Server management
 - **[]()**
 - **[]()**
 - **[]()**
