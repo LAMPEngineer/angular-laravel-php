@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
+use App\Classes\PostcardSendingService;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +31,12 @@ Route::post('/add-student', [StudentController::class, 'addStudent'])->name('stu
 //Route::get('/edit-student', [StudentController::class, 'editStudent']);
 
 Route::get('/edit-student', 'StudentController@editStudent')->name('edit-student');
+
+
+Route::get('/postcards', function(){
+
+    $postcardService = new PostcardSendingService(country:'us', width:4, height:6);
+
+    $postcardService->hello(message: 'Hello from Gautam\'s Tape USA!', email: 'test@test.com');
+
+});
