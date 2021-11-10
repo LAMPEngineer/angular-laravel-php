@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use App\Classes\MyString;
 use App\Billing\Stripe;
+use App\Classes\PostcardSendingService;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -33,6 +34,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->app->singleton(abstract: 'Postcard', concrete: function($app){
+            return new PostcardSendingService(country:'us', width:4, height:6);
+        });
     }
 }

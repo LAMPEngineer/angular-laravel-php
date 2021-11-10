@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
+use App\Classes\Postcard;
 use App\Classes\PostcardSendingService;
 
 /*
@@ -38,5 +39,12 @@ Route::get('/postcards', function(){
     $postcardService = new PostcardSendingService(country:'us', width:4, height:6);
 
     $postcardService->hello(message: 'Hello from Gautam\'s Tape USA!', email: 'test@test.com');
+
+});
+
+
+Route::get('/facades', function(){
+
+    Postcard::something('abc', '123');
 
 });
