@@ -6,14 +6,19 @@ namespace App\Classes;
 class Postcard
 {
 
-	/*public static function any()
+
+	protected static function resolveFacades($name)
 	{
-		dump(var: "inside");
-	}*/
+		return app()[$name];
+
+	}
+
 
 	public static function __callStatic($method, $arguments)
 	{
-		dd(vars: $arguments);
+
+		return (self::resolveFacades(name: 'Postcard'))->$method(...$arguments);
+		
 	}
 
 
