@@ -5,7 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use App\Classes\MyString;
 use App\Billing\Stripe;
-use App\Classes\PostcardSendingService;
+use App\Classes\Facade\PostcardSendingService;
 
 class AppServiceProvider extends ServiceProvider
 {

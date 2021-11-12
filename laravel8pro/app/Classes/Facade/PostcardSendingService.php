@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Classes;
+namespace App\Classes\Facade;
 
 use Illuminate\Support\Facades\Mail;
 

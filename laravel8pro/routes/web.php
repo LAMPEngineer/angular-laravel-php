@@ -2,8 +2,11 @@
 
 use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
-use App\Classes\Postcard;
-use App\Classes\PostcardSendingService;
+use App\Classes\Facade\Postcard;
+use App\Classes\Facade\PostcardSendingService;
+use Facades\App\Classes\Facade\Twitter;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +37,13 @@ Route::post('/add-student', [StudentController::class, 'addStudent'])->name('stu
 Route::get('/edit-student', 'StudentController@editStudent')->name('edit-student');
 
 
+
+/** 
+ * Facade: 
+ * 
+ * 1. without facade - a normal flow
+ *
+ */
 Route::get('/postcards', function(){
 
     $postcardService = new PostcardSendingService(country:'us', width:4, height:6);
@@ -43,8 +53,17 @@ Route::get('/postcards', function(){
 });
 
 
+ /* 2. facade implementation */
 Route::get('/facades', function(){
 
     Postcard::hello('Hello from facade', 'klm123@abc.com');
+
+});
+
+
+ /* 3. real-time facades */
+Route::get('/realtime', function(){
+
+    Twitter::publish('Here is my status');
 
 });
