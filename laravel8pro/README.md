@@ -48,8 +48,8 @@ If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Lar
 - **[Lumen](https://lumen.laravel.com/)** : The stunningly fast micro-framework by Laravel
 - **[Vapor](https://vapor.laravel.com/)** : Serverless deployment platform for Laravel
 - **[Forge](https://forge.laravel.com/)** : Server management
-- **[]()**
-- **[]()**
+- **[Envoyer](https://envoyer.io/)**: Zero downtime deployment
+- **[Horizon](https://laravel.com/docs/8.x/horizon)** : Queue monitoring 
 - **[]()**
 - **[]()**
 - **[]()**
