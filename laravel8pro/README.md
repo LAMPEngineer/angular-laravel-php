@@ -50,7 +50,7 @@ If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Lar
 - **[Forge](https://forge.laravel.com/)** : Server management
 - **[Envoyer](https://envoyer.io/)** : Zero downtime deployment
 - **[Horizon](https://laravel.com/docs/8.x/horizon)** : Queue monitoring 
-- **[Nova](nova.laravel.com)**: Administration panel 
+- **[Nova](nova.laravel.com)** : Administration panel 
 - **[Echo](https://laravel.com/docs/8.x/broadcasting)** : Realtime events
 - **[Sail](https://laravel.com/docs/8.x/sail)** : Local docker development environment
 - **[Spark](https://spark.laravel.com/)** : SaaS app scaffolding
