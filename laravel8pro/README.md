@@ -48,13 +48,13 @@ If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Lar
 - **[Lumen](https://lumen.laravel.com/)** : The stunningly fast micro-framework by Laravel
 - **[Vapor](https://vapor.laravel.com/)** : Serverless deployment platform for Laravel
 - **[Forge](https://forge.laravel.com/)** : Server management
-- **[Envoyer](https://envoyer.io/)**: Zero downtime deployment
+- **[Envoyer](https://envoyer.io/)** : Zero downtime deployment
 - **[Horizon](https://laravel.com/docs/8.x/horizon)** : Queue monitoring 
 - **[Nova](nova.laravel.com)**: Administration panel 
-- **[Echo](https://laravel.com/docs/8.x/broadcasting)**: Realtime events
-- **[Sail](https://laravel.com/docs/8.x/sail)**: Local docker development environment
-- **[Spark](https://spark.laravel.com/)**: SaaS app scaffolding
-- **[Valet](https://laravel.com/docs/8.x/valet)**: Dev environment for macOS
+- **[Echo](https://laravel.com/docs/8.x/broadcasting)** : Realtime events
+- **[Sail](https://laravel.com/docs/8.x/sail)** : Local docker development environment
+- **[Spark](https://spark.laravel.com/)** : SaaS app scaffolding
+- **[Valet](https://laravel.com/docs/8.x/valet)** : Dev environment for macOS
 - **[]()**
 - **[]()**
 - **[]()**
