@@ -1,6 +1,6 @@
 <?php
-// Report all PHP errors
-error_reporting(E_ALL);
+    include("index.php");
+
 
 echo "Variable, Anonymous, Callable, Closure & Arrow Functions<br/>";
 
@@ -8,10 +8,11 @@ echo "Variable, Anonymous, Callable, Closure & Arrow Functions<br/>";
  * Variable, Anonymous, Callable, Closure & Arrow Functions
  */
 
-function sum(int ...$numbers): int{
-	return array_sum($numbers);
-}
+$sum = function (int ...$numbers): int {
+	       return array_sum($numbers);
+        };
 
 
+echo $sum(1, 2, 3, 4, 5);
 
-echo sum(1, 2, 3, 4, 5);
+include("abc.php");
