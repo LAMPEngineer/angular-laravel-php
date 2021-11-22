@@ -43,7 +43,7 @@ If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Lar
 - **[Fortify](https://laravel.com/docs/8.x/fortify)**
 - **[Homestead](https://laravel.com/docs/8.x/homestead)**
 - **[Passport](https://laravel.com/docs/8.x/passport)**
-
+https://laravel.com/docs/8.x/billing
 ## The Laravel Ecosystem
 - **[Lumen](https://lumen.laravel.com/)** : The stunningly fast micro-framework by Laravel
 - **[Vapor](https://vapor.laravel.com/)** : Serverless deployment platform for Laravel
@@ -55,8 +55,8 @@ If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Lar
 - **[Sail](https://laravel.com/docs/8.x/sail)** : Local docker development environment
 - **[Spark](https://spark.laravel.com/)** : SaaS app scaffolding
 - **[Valet](https://laravel.com/docs/8.x/valet)** : Dev environment for macOS
-- **[]()**
-- **[]()**
+- **[Mix](https://laravel.com/docs/8.x/mix)** : Webpack Asset Compilation
+- **[Cashier](https://laravel.com/docs/8.x/billing)** : Subscription Billing Services
 - **[]()**
 
 
