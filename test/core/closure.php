@@ -2,7 +2,7 @@
     include("index.php");
 
 
-echo "Variable, Anonymous, Callable, Closure & Arrow Functions<br/>";
+echo "Variable, Anonymous, Callable, Closure & Arrow Functions<br/>\n";
 
 /*
  * Variable, Anonymous, Callable, Closure & Arrow Functions
@@ -13,6 +13,6 @@ $sum = function (int ...$numbers): int {
         };
 
 
-echo $sum(1, 2, 3, 4, 5);
+echo $sum(1, 2, 3, 4, 5,6)."\n";
 
-include("abc.php");
+//include("abc.php");
