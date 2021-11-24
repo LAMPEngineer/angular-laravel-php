@@ -8,11 +8,17 @@ echo "Variable, Anonymous, Callable, Closure & Arrow Functions<br/>\n";
  * Variable, Anonymous, Callable, Closure & Arrow Functions
  */
 
-$sum = function (int ...$numbers): int {
+$x = 4;
+
+$sum = function (int ...$numbers) use (&$x): int {
+            $x = 15;
+            echo $x ."<br/>";
+
 	       return array_sum($numbers);
         };
 
 
-echo $sum(1, 2, 3, 4, 5,6)."\n";
+echo $sum(1, 2, 3, 4)."\n";
 
-//include("abc.php");
+echo '<br/>'. $x;
+
