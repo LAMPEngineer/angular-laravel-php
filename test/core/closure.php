@@ -2,23 +2,26 @@
     include("index.php");
 
 
-echo "Variable, Anonymous, Callable, Closure & Arrow Functions<br/>\n";
-
 /*
  * Variable, Anonymous, Callable, Closure & Arrow Functions
  */
 
-$x = 4;
 
-$sum = function (int ...$numbers) use (&$x): int {
-            $x = 15;
-            echo $x ."<br/>";
-
-	       return array_sum($numbers);
-        };
+echo "Anonymous, Callable with array_map<br/>\n";
 
 
-echo $sum(1, 2, 3, 4)."\n";
 
-echo '<br/>'. $x;
+/*use case: 1*/
+$array = [1,2,3,4];
 
+$array2 = array_map(function($element){
+                return $element * 2;
+            }, $array);
+
+echo '<pre>';
+
+print_r($array);
+
+print_r($array2);
+
+echo '</pre>';
