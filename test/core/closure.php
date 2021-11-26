@@ -7,38 +7,20 @@
  */
 
 
-echo "Anonymous, Callable with array_map<br/>\n";
+echo "Anonymous, Callable <br/>\n";
 
 
+$sum = function (callable $callback, int ...$numbers): int {
 
-/*use case: 1*/
-$array = [1,2,3,4];
-
-$x = function(int $element): int {
-        return $element * 2;
-    };
-
-$array2 = array_map($x, $array);
+           return $callback(array_sum($numbers));
+        };
 
 
-
-/*use case: 2*/
-$array2 = array_map(function(int $element): int {
-        return $element * 3;
-    }, $array);
+echo '<br>Sun = '.$sum('foo', 1, 2, 3, 4, 5)."\n";
 
 
+function foo($element){
+    return $element * 2;
+}
 
 
-/*use case: 3, As of PHP 7.4.0: Arrow function*/
-
-$array2 = array_map(fn(int $element): int => $element * 4, $array);
-
-
-echo '<pre>';
-
-print_r($array);
-
-print_r($array2);
-
-echo '</pre>';
