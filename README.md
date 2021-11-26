@@ -7,5 +7,5 @@
 # Test
 
 ## core
-## bootstrep
+## bootstrap
 ## html (js+css)
