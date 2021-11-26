@@ -7,20 +7,21 @@
  */
 
 
-echo "Anonymous, Callable <br/>\n";
+echo "Anonymous, Callable & Closure<br/>\n";
 
 
-$sum = function (callable $callback, int ...$numbers): int {
+$sum = function (closure $callback, int|float ...$numbers): int|float {
 
            return $callback(array_sum($numbers));
         };
 
+$x = function ($element){
+            return $element * 2;
+        };
 
-echo '<br>Sun = '.$sum('foo', 1, 2, 3, 4, 5)."\n";
+echo '<br>Sun = '.$sum($x, 1, 2.4, 3, 4.2, 5)."\n";
 
 
-function foo($element){
-    return $element * 2;
-}
+
 
 
