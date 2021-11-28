@@ -58,6 +58,9 @@ If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Lar
 - **[]()**
 - **[]()**
 - **[]()**
+- **[]()**
+- **[]()**
+- **[]()**
 
 
 ## Laravel Sponsors
