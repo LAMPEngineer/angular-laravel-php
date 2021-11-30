@@ -57,8 +57,8 @@ If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Lar
 - **[Valet](https://laravel.com/docs/8.x/valet)** : Dev environment for macOS
 - **[Mix](https://laravel.com/docs/8.x/mix)** : Webpack Asset Compilation
 - **[Cashier](https://laravel.com/docs/8.x/billing)** : Subscription Billing Integration
-- **[]()**
-- **[]()**
+- **[Dusk](https://laravel.com/docs/8.x/dusk)** :  Browser Automation and Testing
+- **[Sanctum](https://laravel.com/docs/8.x/sanctum)** : API / Mobile Authentication 
 - **[]()**
 - **[]()**
 
