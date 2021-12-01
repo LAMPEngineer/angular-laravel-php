@@ -3,7 +3,7 @@
 
 
 /*
- * Variable, Anonymous, Callable, Closure & Arrow Functions
+ * Anonymous, Callable, Closure 
  */
 
 
