@@ -61,6 +61,8 @@ If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Lar
 - **[Sanctum](https://laravel.com/docs/8.x/sanctum)** : API / Mobile Authentication 
 - **[]()**
 - **[]()**
+- **[]()**
+- **[]()**
 
 
 ## Laravel Sponsors
