@@ -19,9 +19,8 @@ echo '</pre>';
 /* use case: 2*/
 $name = 'Alex';
 
-$greet = function ($nm) {
-			return 'Hey ' . $nm;
-		};
+$greet = fn () => 'Hey ' . $name;
 
 
-var_dump($greet($name));
+
+var_dump($greet());
