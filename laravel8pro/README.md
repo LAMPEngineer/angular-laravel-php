@@ -59,8 +59,8 @@ If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Lar
 - **[Cashier](https://laravel.com/docs/8.x/billing)** : Subscription Billing Integration
 - **[Dusk](https://laravel.com/docs/8.x/dusk)** :  Browser Automation and Testing
 - **[Sanctum](https://laravel.com/docs/8.x/sanctum)** : API / Mobile Authentication 
-- **[]()**
-- **[]()**
+- **[Sout](https://laravel.com/docs/8.x/scout)** : Full-Text Search
+- **[Socialite](https://laravel.com/docs/8.x/socialite)** : OAuth Authentication
 - **[]()**
 - **[]()**
 - **[]()**
