@@ -21,6 +21,21 @@ $name = 'Alex';
 
 $greet = fn () => 'Hey ' . $name;
 
-
-
 var_dump($greet());
+
+
+
+
+/* use case: 3*/
+
+$string = 'alexander';
+
+$split = str_split($string);
+
+$result = array_map(fn ($char, $count) => compact('char', 'count'), array_unique($split), array_count_values($split));
+
+
+echo '<pre>', var_dump($result), '</pre>';
+
+
+
