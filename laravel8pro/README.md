@@ -61,8 +61,8 @@ If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Lar
 - **[Sanctum](https://laravel.com/docs/8.x/sanctum)** : API / Mobile Authentication 
 - **[Sout](https://laravel.com/docs/8.x/scout)** : Full-Text Search
 - **[Socialite](https://laravel.com/docs/8.x/socialite)** : OAuth Authentication
-- **[]()**
-- **[]()**
+- **[Telescope](https://laravel.com/docs/8.x/telescope)** : Debug Assistant
+- **[Jetstream](https://jetstream.laravel.com/2.x/introduction.html)** : App Scaffolding
 - **[]()**
 - **[]()**
 
