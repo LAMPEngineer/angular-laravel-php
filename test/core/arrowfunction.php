@@ -3,7 +3,7 @@
 
 
 /*
- * Arrow Functions
+ * Arrow Function
  */
 
 
