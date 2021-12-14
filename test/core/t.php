@@ -1,8 +1,12 @@
 <?php
     //include("index.php");
+    
+    $name = 'Alex';
 	
-	echo print 'Hello & Hi';
+echo "Hello {$name}<br/>";
 
+?>
 
-
+<!-- Short tag to print-->
+<?= $name; ?>
 
