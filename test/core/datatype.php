@@ -1,4 +1,6 @@
 <?php
+    declare(strict_types=1);
+
     include("index.php");
     
 /* Data Types & Type Casting */
@@ -48,13 +50,13 @@ echo '<br/><br/>';
  *  
  */
  
-declare(strict_types=1);
 
-function sum(int $x, int $y){
+
+function sum(float $x, float $y){
     return $x + $y;
 }
 
-$sum = sum('2', 5); // passing string value to int type 
+$sum = sum(3, 5); // passing int values to float - no error
 
 echo $sum, '<br />';
 
