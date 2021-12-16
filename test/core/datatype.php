@@ -38,3 +38,25 @@
     $name = null;
     var_dump($name);    
 
+echo '<br/><br/>';
+
+/* Type Juggling (or Type Correction):
+ *
+ *  PHP does not require explicit type definition in variable
+ *  declaration. A variable's type is determined by the context 
+ *  in which the variable is used.
+ *  
+ */
+function sum(int $x, int $y){
+
+    var_dump($x, $y);
+    echo '<br />';
+
+    return $x + $y;
+}
+
+$sum = sum(2.5, '5'); // passing float and string 
+
+echo $sum, '<br />';
+
+var_dump($sum);
