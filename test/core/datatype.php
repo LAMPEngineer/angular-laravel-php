@@ -49,13 +49,14 @@ echo '<br/><br/>';
  */
 function sum(int $x, int $y){
 
+    $x = 5.5;
     var_dump($x, $y);
     echo '<br />';
 
     return $x + $y;
 }
 
-$sum = sum(2.5, '5'); // passing float and string 
+$sum = sum(2, 5); // passing float and string 
 
 echo $sum, '<br />';
 
