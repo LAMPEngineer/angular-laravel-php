@@ -47,16 +47,14 @@ echo '<br/><br/>';
  *  in which the variable is used.
  *  
  */
+ 
+declare(strict_types=1);
+
 function sum(int $x, int $y){
-
-    $x = 5.5;
-    var_dump($x, $y);
-    echo '<br />';
-
     return $x + $y;
 }
 
-$sum = sum(2, 5); // passing float and string 
+$sum = sum('2', 5); // passing string value to int type 
 
 echo $sum, '<br />';
 
