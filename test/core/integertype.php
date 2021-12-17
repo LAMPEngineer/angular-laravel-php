@@ -18,3 +18,12 @@ echo $x, '<br/>';
 
 $y = PHP_INT_MAX + 1;
 var_dump($y);
+echo '<br/>';
+
+/* type cast */
+
+$z = (int)5.98;
+
+var_dump(is_int($z));
+
+
