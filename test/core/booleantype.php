@@ -4,7 +4,7 @@
     
 /* Boolean Data Types */
 
-$isComplete = null;
+$isComplete = (string)true;
 
 # integers 0, -0 are false
 # floats 0.0, -0.0 are false
@@ -13,4 +13,6 @@ $isComplete = null;
 # array [] is false
 # null is false
 
-echo ($isComplete)? 'success':'fail';
+var_dump(is_bool($isComplete));
+
+//echo ($isComplete)? 'success':'fail';
