@@ -9,21 +9,21 @@
 
 # String Operators (. .=)
 
-# Comparison Operators ()
+# Comparison Operators (== === != !== < > <= => <=> ?? ?:)
 
-# Error Controller Operators ()
+# Error Controller Operators (@)
 
-# Incremental/Decrement Operators ()
+# Incremental/Decrement Operators (++ --)
 
-# Logical Operators ()
+# Logical Operators (&& || ! and or xor)
 
-# Bitwise Operators ()
+# Bitwise Operators (& | ^ ~ << >>)
 
-# Array Operators ()
+# Array Operators (+ == === != <> !==)
 
-# Execution Operators ()
+# Execution Operators (``)
 
-# Type Operators ()
+# Type Operators (instanceof)
 
-# Nullsafe Operators - PHP8 ()
-#   
+# Nullsafe Operators - PHP8 (?)
+
