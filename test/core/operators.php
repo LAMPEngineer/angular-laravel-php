@@ -3,7 +3,7 @@
   
 /* OPERATORS */
 
-# Arithmetic Operators (+ - * / % **)
+# 1. Arithmetic Operators (+ - * / % **)
 $x = 10;
 $y = 0 ;
 
@@ -27,45 +27,74 @@ echo '<br/>';
 var_dump(fmod($x1, $y1)); 
 echo '<br/>';
 
-# Assignment Operators (= += -= *= /= %= **=)
+
+
+# 2. Assignment Operators (= += -= *= /= %= **=)
 $x = ($y = 10) + 5;
 var_dump($x, $y);
 
 echo '<br/>Exponent: ', $x **= 3;
 
-# String Operators (. .=)
+
+
+# 3. String Operators (. .=)
 
 $x = 'Hello';
  echo '<br/> ', $x .= ' World', '<br/>';
 
-# Comparison Operators (== === != !== < > <= => <=> ?? ?:)
+
+
+# 4. Comparison Operators (== === != !== < > <= => <=> ?? ?:)
 
 $x = 5;
 $y = '5';
 var_dump($x == $y);  // return true
 var_dump($x === $y); // Strict comparison: return false as value is same but data type is different
 
+/* Spaceship operator '<=>':
+ * This is a three-way comparison operator and 
+ * it can perform greater than, less than and equal comparison 
+ * between two operands. It returns -1, 0 or 1 when $a is 
+ * respectively less than, equal to, or greater than $b
+ *
+ */
+ // Integer
+ echo '<br/>',1 <=> 1; // 0
+ echo '<br/>',2 <=> 1; // 1
+ echo '<br/>',1 <=> 2; // -1
 
-# Error Controller Operators (@)
+ //Float
+ echo '<br/>',1.5 <=> 1.5; // 0
+ echo '<br/>',2.5 <=> 1.5; // 1
+ echo '<br/>',1.5 <=> 2.5; // -1
+
+// String
+ echo '<br/>','a' <=> 'a'; // 0
+ echo '<br/>','b' <=> 'a'; // 1
+ echo '<br/>','a' <=> 'b'; // -1
 
 
-# Incremental/Decrement Operators (++ --)
+
+# 5. Error Controller Operators (@)
 
 
-# Logical Operators (&& || ! and or xor)
+# 6. Incremental/Decrement Operators (++ --)
 
 
-# Bitwise Operators (& | ^ ~ << >>)
+# 7. Logical Operators (&& || ! and or xor)
 
 
-# Array Operators (+ == === != <> !==)
+# 8. Bitwise Operators (& | ^ ~ << >>)
 
 
-# Execution Operators (``)
+# 9. Array Operators (+ == === != <> !==)
 
 
-# Type Operators (instanceof)
+# 10. Execution Operators (``)
 
 
-# Nullsafe Operators - PHP8 (?)
+# 11. Type Operators (instanceof)
+
+
+# 12. Nullsafe Operators - PHP8 (?)
 
