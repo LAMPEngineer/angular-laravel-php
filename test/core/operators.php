@@ -14,24 +14,36 @@ $y = 0 ;
  */
 
 var_dump(fdiv($x, $y)); 
+echo '<br/>';
 
 $x1 = 10.5;
 $y1 = 2.9;
 
 var_dump($x1 % $y1); // return 0
-
+echo '<br/>';
 /* fmod() — Returns the floating point remainder (modulo) 
  * of the division of the arguments 
  */
 var_dump(fmod($x1, $y1)); 
+echo '<br/>';
 
 # Assignment Operators (= += -= *= /= %= **=)
+$x = ($y = 10) + 5;
+var_dump($x, $y);
 
+echo '<br/>Exponent: ', $x **= 3;
 
 # String Operators (. .=)
 
+$x = 'Hello';
+ echo '<br/> ', $x .= ' World', '<br/>';
 
 # Comparison Operators (== === != !== < > <= => <=> ?? ?:)
+
+$x = 5;
+$y = '5';
+var_dump($x == $y);  // return true
+var_dump($x === $y); // Strict comparison: return false as value is same but data type is different
 
 
 # Error Controller Operators (@)
