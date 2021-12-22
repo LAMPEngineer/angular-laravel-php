@@ -68,11 +68,25 @@ var_dump($x === $y); // Strict comparison: return false as value is same but dat
  echo '<br/>',2.5 <=> 1.5; // 1
  echo '<br/>',1.5 <=> 2.5; // -1
 
-// String
+ // String
  echo '<br/>','a' <=> 'a'; // 0
  echo '<br/>','b' <=> 'a'; // 1
  echo '<br/>','a' <=> 'b'; // -1
 
+
+/* Null coalescing operator '??':
+ *
+ *  This is like a door that only lets NULL through
+ *  
+ *  It always returns first parameter, unless first parameter happens to be NULL
+ *  
+ * This means ?? is same as (!isset() || is_null())
+ *
+ */
+ 
+ echo '<br/>', var_dump(false ?? 'value2'); // false
+ echo '<br/>', var_dump(true ?? 'value2');  // true
+ echo '<br/>', var_dump(null ?? 'value2');  // null
 
 
 # 5. Error Controller Operators (@)
