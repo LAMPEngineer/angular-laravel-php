@@ -90,10 +90,11 @@ var_dump($x === $y); // Strict comparison: return false as value is same but dat
 
 
 # 5. Error Controller Operators (@)
-
+ $x = @file('foo.txt'); // don't use for error handling
 
 # 6. Incremental/Decrement Operators (++ --)
-
+ $x = 5;
+ echo '<br/>', --$x;
 
 # 7. Logical Operators (&& || ! and or xor)
 
