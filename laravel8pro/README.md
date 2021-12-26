@@ -63,8 +63,7 @@ If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Lar
 - **[Socialite](https://laravel.com/docs/8.x/socialite)** : OAuth Authentication
 - **[Telescope](https://laravel.com/docs/8.x/telescope)** : Debug Assistant
 - **[Jetstream](https://jetstream.laravel.com/2.x/introduction.html)** : App Scaffolding
-- **[]()**
-- **[]()**
+
 
 ## Laravel Sponsors
 
