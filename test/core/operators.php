@@ -128,7 +128,19 @@ echo '<br/>Execution Operator(``)', "<pre>$output</pre>"; // Use of the backtick
 
 # 11. Type Operators (instanceof)
 
+class A{
 
+}
+
+class notA{
+
+}
+
+$a = new A;
+
+echo '<br/>instanceof: ', var_dump($a instanceof A); // true
+
+echo '<br/>instanceof: ', var_dump($a instanceof notA); // false
 
 # 12. Nullsafe Operators - PHP8 (?)
 
