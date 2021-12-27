@@ -121,12 +121,12 @@ $y = ['a'=>4, 'e'=>5, 'f'=>6, 'g'=>7, 'h'=>8];
 echo '<br/>array + = ';print_r($x + $y); // union
 
 
-# 10. Execution Operators (``)
+# 10. Execution Operator (``)
 $output = `ls -al`;
 echo '<br/>Execution Operator(``)', "<pre>$output</pre>"; // Use of the backtick operator is identical to shell_exec().
 
 
-# 11. Type Operators (instanceof)
+# 11. Type Operator (instanceof)
 
 class A{
 
@@ -142,5 +142,21 @@ echo '<br/>instanceof: ', var_dump($a instanceof A); // true
 
 echo '<br/>instanceof: ', var_dump($a instanceof notA); // false
 
-# 12. Nullsafe Operators - PHP8 (?)
+# 12. Nullsafe Operator - PHP8 (?->)
 
+class User {
+    public function profile()
+    {
+        return new Profile;
+    }
+}
+
+class Profile{
+    public function employment()
+    {
+        return 'web developer';
+    }
+}
+
+$user = new User;
+echo '<br/>Nullsafe: ', $user->profile()?->employment(); // web developer, if profile is null it return null but no error
