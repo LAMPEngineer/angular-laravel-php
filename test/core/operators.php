@@ -97,7 +97,10 @@ var_dump($x === $y); // Strict comparison: return false as value is same but dat
  echo '<br/>', --$x;
 
 # 7. Logical Operators (&& || ! and or xor)
-
+# xor - true if either $x or $y are true, but not both.
+$x = true;
+$y = true;
+echo '<br/>Xor= ',var_dump($x xor $y); // false
 
 # 8. Bitwise Operators (& | ^ ~ << >>)
 
