@@ -104,6 +104,16 @@ echo '<br/>Xor= ',var_dump($x xor $y); // false
 
 # 8. Bitwise Operators (& | ^ ~ << >>)
 
+$x = 6;
+$y = 3;
+
+/* 6 => 110
+         &
+   3 => 011
+       -----
+        011 => 2
+*/
+echo '<br/>& = ',var_dump($x & $y); // 2
 
 # 9. Array Operators (+ == === != <> !==)
 
