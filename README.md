@@ -6,6 +6,8 @@
 
 # PHP8
 
+# MySQL 8.0
+
 # Test
 
 ## core
