@@ -1,10 +1,10 @@
 
 
-# Laravel8
+# Laravel 8.0
 
-# Angular11
+# Angular 11
 
-# PHP8
+# PHP 8.0 
 
 # MySQL 8.0
 
