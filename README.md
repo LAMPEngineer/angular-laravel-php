@@ -2,7 +2,7 @@
 
 # Laravel 8.0
 
-# Angular 11
+# Angular 11.0
 
 # PHP 8.0 
 
