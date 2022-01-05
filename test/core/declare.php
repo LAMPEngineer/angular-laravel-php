@@ -4,7 +4,7 @@
  * It is use to set execution directives for a block of code
  */
 
-
+declare(strict_types=1);
 
 /* 1. declare - ticks directive
  *
@@ -48,4 +48,9 @@ while ($i < $length) {
   * type hints will throw a fatal error instead of 
   * being cast to correct type
   */
+  
+  function sum(int $a, int $b){
+  	return $a + $b;
+  }
 
+  echo '<br/>sum= ' . sum(5, 1);
