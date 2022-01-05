@@ -4,7 +4,7 @@
  * It is use to set execution directives for a block of code
  */
 
-declare(strict_types=1);
+
 
 /* 1. declare - ticks directive
  *
@@ -12,6 +12,9 @@ declare(strict_types=1);
  * specified number of instructions has been executed. 
  * A tick function can be registerd which will run each time 
  * a tick event fires.
+ *
+ * The event(s) that occur on each tick are 
+ * specified using the register_tick_function().
  */
 
 
@@ -39,6 +42,9 @@ while ($i < $length) {
   * it has to apply to whole file
   */
 
+	/*declare(encoding='ISO-8859-1');
+	// code here*/
+
 
 
  /* 3. declare - strict_type directive
@@ -49,8 +55,10 @@ while ($i < $length) {
   * being cast to correct type
   */
   
+  /*declare(strict_types=1);
   function sum(int $a, int $b){
   	return $a + $b;
   }
 
-  echo '<br/>sum= ' . sum(5, 1);
+  echo '<br/>sum= ' . sum('5', 1); // fatal error
+  */
