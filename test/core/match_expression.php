@@ -52,4 +52,44 @@ $message = match($statusCode){
 	default => 'unknown status code',
 };
 
-echo '<br/> status = ', var_dump($message); // unknown status code
+echo '<br/> status = ', var_dump($message),'<br/>'; // unknown status code
+
+
+/* switch-case vs match */
+
+$paymentStatus = 3;
+
+switch ($paymentStatus) {
+    case 1:
+        echo 'Paid';
+        break;
+    
+
+    case 2:
+    case 3:
+        echo 'Payment Declined';
+        break;
+
+
+    case 0:
+        echo 'Pending Payment'; 
+        break;
+
+
+    default:
+        echo 'Unknown Payment status';
+        break;
+}
+
+
+
+$return_payment_status = match ($paymentStatus) {
+    1       =>  'Paid',
+    2,3     =>  'Payment Declined',
+    0       =>  'Pending Payment',
+    default => 'Unknown Payment status',
+};
+
+echo '<br/>', $return_payment_status;
+
+
