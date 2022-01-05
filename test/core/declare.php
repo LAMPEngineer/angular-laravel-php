@@ -5,7 +5,15 @@
  */
 
 
-# declare - ticks directive
+
+/* 1. declare - ticks directive
+ *
+ * The ticks directive will send a tick event each time a 
+ * specified number of instructions has been executed. 
+ * A tick function can be registerd which will run each time 
+ * a tick event fires.
+ */
+
 
 function onTick(){
 	echo 'Tick <br/>';
@@ -24,8 +32,20 @@ while ($i < $length) {
 }
 
 
-# declare - encoding directive
+ /* 2. declare - encoding directive
+  *
+  * It is use to indicate what character encoding 
+  * file is using. It cannot be use on a block, 
+  * it has to apply to whole file
+  */
 
 
 
-# declare - strict_type directive
+ /* 3. declare - strict_type directive
+  *
+  * when strict_type directive is set, values of 
+  * wrong type passed into function arguments with 
+  * type hints will throw a fatal error instead of 
+  * being cast to correct type
+  */
+
