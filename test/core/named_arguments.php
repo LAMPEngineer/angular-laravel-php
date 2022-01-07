@@ -66,12 +66,14 @@ greet1(name: "Simon", warm: true);
 
 
 
-/*Variadic function (... operator):
+/* Variadic function (... operator):
  *
- * It accepts a variable number of parameters and parameter becomes an array inside the function
+ * It accepts a variable number of parameters and parameter becomes 
+ * an array inside the function
  *
  *
- *  If function has multiple parameters, only last parameter could be variadic
+ *  If function has multiple parameters, only last parameter 
+ *  could be variadic
  */
 
  function sum(int ...$numbers): int
@@ -90,4 +92,19 @@ echo '<br/>arg 2= '. sum(1,3);
 echo '<br/>arg 5= '. sum(1,3,5,7,9);
 
 
-# Argument Unpacking
+
+
+/* Argument Unpacking (via ... operator)
+ *
+ * It allows to pass an array in to a function expecting 
+ * separate parameters in the traditional way. This is 
+ * complementry to Variadic function. 
+ * 
+ */
+function add($a, $b, $c)
+{
+	return $a + $b + $c;
+}
+
+$operators = [2,3];
+echo '<br/>array unpacking=  '. add(1, ...$operators);
