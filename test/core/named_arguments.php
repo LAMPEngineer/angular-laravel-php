@@ -60,6 +60,34 @@ greet1(name: "Simon", warm: true);
 
 
 
-/*Refrence:
+/*Reference:
  * https://php.watch/versions/8.0/named-parameters
  */
+
+
+
+/*Variadic function (... operator):
+ *
+ * It accepts a variable number of parameters and parameter becomes an array inside the function
+ *
+ *
+ *  If function has multiple parameters, only last parameter could be variadic
+ */
+
+ function sum(int ...$numbers): int
+ {
+ 	$total = 0;
+ 	$count_numbers = count($numbers);
+ 	for($i = 0; $i < $count_numbers; $i++){
+ 		$total += $numbers[$i];
+ 	}
+
+ 	return $total;
+ }
+
+
+echo '<br/>arg 2= '. sum(1,3);
+echo '<br/>arg 5= '. sum(1,3,5,7,9);
+
+
+# Argument Unpacking
