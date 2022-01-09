@@ -51,9 +51,20 @@ echo date_default_timezone_get() . '<br /><br />';
 
 echo mktime(0, 0, 0, 4, 10, null) . '<br />';
 
-echo date('d/m/Y g:ia', mktime(0, 0, 0, 4, 10, null)) . '<br >';
+echo date('d/m/Y g:ia', mktime(0, 0, 0, 4, 10, null)) . '<br ><br >';
 
 
+
+/*
+ * strtotime — Parse any English textual datetime description 
+ *             into a Unix timestamp
+ *  
+ */
+
+echo strtotime('2022-01-04 07:00:00') . '<br >';
+echo date('d/m/Y g:ia', strtotime('2022-01-04 07:00:00')) . '<br >';
+echo 'First day of Feb = ' .date('d/m/Y g:ia', strtotime('first day of february')) . '<br >';
+echo 'Second Fri of Jan = ' .date('d/m/Y g:ia', strtotime('second friday of January')) . '<br >';
 
 
 
