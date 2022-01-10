@@ -86,6 +86,16 @@ print_r(date_parse($date));
 echo '</pre>';
 
 
+/* 
+ * date_parse_from_format() - Get info about given date formatted 
+ * according to the specified format
+ *
+ */
+
+echo '<pre>';
+print_r(date_parse_from_format('d/m/y g:ia', $date)); // error populated 
+echo '</pre>';
+
 
 
 # Datetime vs. Timestamp
