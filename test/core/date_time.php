@@ -19,6 +19,8 @@ echo date('d/m/Y g:ia', $currentTime + 5 * 24 * 60 * 60) . '<br />';
 echo date('d/m/Y g:ia', $currentTime - 24 * 60 * 60) . '<br />';
 
 
+# Time zones
+
 echo date_default_timezone_get() . '<br /><br />';
 
 
@@ -70,7 +72,20 @@ echo 'Second Fri of Jan = ' .date('d/m/Y g:ia', strtotime('second friday of Janu
 
 
 
-# Time zones
-# Parsing dates
-# mktime() - get Unix timestamp
+/* Parsing dates
+ *
+ * date_parse() - returns associative array with detailed info 
+ * about given date/time
+ *
+ * 
+ */
+$date = date('d/m/Y g:ia', strtotime('second friday of January'));
+
+echo '<pre>';
+print_r(date_parse($date));
+echo '</pre>';
+
+
+
+
 # Datetime vs. Timestamp
