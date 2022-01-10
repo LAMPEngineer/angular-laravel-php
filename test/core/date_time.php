@@ -98,4 +98,40 @@ echo '</pre>';
 
 
 
-# Datetime vs. Timestamp
+# Datetime vs. Timestamp (MySQL)
+/*
+ * MySQL timestamp datatype:
+ * 
+ *  a. Are stored in UTC -
+ *    THey are converted to UTC on storage and converted back to our
+ *    time zone on retrieval. If we change time zone, the retrieved 
+ *    values also change.
+ *    
+ *  b. Can be automatically initialised & updated -
+ *     We can set their default value and/or auto update value to 
+ *     CURRENT_TIMESTAMP
+ *
+ *  c. Have a range of 1970-01-01 00:00:01 UTC to 2038-01-19 03:14:04 UTC
+ */
+
+ /*
+  * MySQL datetime datatype:
+  *
+  * a. What we store what we get
+  *
+  * b. We can store dates where day or month is zero
+  *
+  * c. Have a range of 1000-01-01 00:00:00 to 9999-12-31 23:59:59
+  * 
+  */  
+ 
+ /*
+  * 1. DATETIME and TIMESTAMP require 5 bytes and 4 bytes
+  *
+  * 2. TIMESTAMP is affected by timezone, but DATETIME remains constant
+  *
+  * 3. DATETIME can not be indexed while TIMESTAMP can be
+  *
+  * 4. Queries with TIMESTAMP will be cached, but it is not case with DATETIME
+  * 
+  */
