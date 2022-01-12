@@ -63,6 +63,7 @@ prettyPrintArray($first_names);
 echo '---- array_column index by id ----<br />';
 prettyPrintArray(array_column($records, 'last_name', 'id'));
 
+
 # array_combine
 # array_filter
 # array_values
