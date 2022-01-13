@@ -88,7 +88,40 @@ echo '---- usernames from public "username" property  ----<br />';
 
 /*
  * case 4: Get column name of names from private "name" property of 
- * an object using magic __get() method
+ * an object using magic __get() method.
+ * 
+ * If __isset() is not available, then an empty array will be returned
  * 
  */
 
+class Person
+{
+    private $name;
+
+    public function __construct(string $name)
+    {
+        $this->name = $name;
+    }
+
+    public function __get($prop)
+    {
+        return $this->$prop;
+    }
+
+    public function __isset($prop): bool
+    {
+        return isset($this->$prop);
+    }
+
+}
+
+$people = [
+            new Person('Fred'),
+            new Person('Jane'),
+            new Person('John')
+          ];
+
+prettyPrintArray($people);
+echo '---- column of names from the private "name" property ----<br />';
+
+prettyPrintArray(array_column($people, 'name'));
