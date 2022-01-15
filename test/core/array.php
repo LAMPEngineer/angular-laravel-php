@@ -74,6 +74,30 @@ prettyPrintArray(array_column($records, 'last_name', 'id'));
 echo '---- array_combine ----<br />';
   prettyPrintArray(array_combine($keys, $values));  
 
+
+/* array_count_values(array $array): array
+ *      - returns an array using values of array as keys and their
+ *       frequency in array as values
+ */
+$array = [1, 'hello', 1, 'world', 'hello'];
+echo '---- array_count_values ----<br />';
+prettyPrintArray(array_count_values($array));
+
+/* case : simple way to find number of items with specific values in 
+   multidimensional array */
+$list = [
+    ['id' => 1, 'userId' => 5],
+    ['id' => 2, 'userId' => 5],
+    ['id' => 3, 'userId' => 6]
+];
+
+$userId = 5;
+
+prettyPrintArray($list);
+echo '<br />---- userId = 5 => count: ';
+echo array_count_values(array_column($list, 'userId'))[$userId];
+
+
 # array_filter
 # array_values
 # array_filter - no callback
