@@ -125,3 +125,21 @@ prettyPrintArray($people);
 echo '---- column of names from the private "name" property ----<br />';
 
 prettyPrintArray(array_column($people, 'name'));
+
+
+
+
+
+
+/* case 5: Use array_map insted of array_column to get column of
+ * first_name from a record - just to compare
+ * 
+ * But can't get - indexed by the "id" column
+ */
+
+$first_names = array_map(function($record){
+     return $record['first_name'];
+}, $records);
+
+echo '---- column of first_names using array_map ----<br />';
+prettyPrintArray($first_names);
