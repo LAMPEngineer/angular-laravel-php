@@ -64,7 +64,16 @@ echo '---- array_column index by id ----<br />';
 prettyPrintArray(array_column($records, 'last_name', 'id'));
 
 
-# array_combine
+/* 4. array_combine(array $keys, array $values): array
+ *      - creates an array by using one array for keys and one another 
+ *      for its values
+ */
+  $keys = ['a', 'b', 'c'];
+  $values = [5, 10, 15];
+
+echo '---- array_combine ----<br />';
+  prettyPrintArray(array_combine($keys, $values));  
+
 # array_filter
 # array_values
 # array_filter - no callback
