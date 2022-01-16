@@ -98,6 +98,21 @@ echo '<br />---- userId = 5 => count: ';
 echo array_count_values(array_column($list, 'userId'))[$userId];
 
 
+
+/*
+ * 5. array_diff_assoc(array $array, array ...$arrays): array
+ *       - Returns an array containing all values from array that 
+ *         are not present in any of the other arrays
+ */
+$array1 = array('a' => 'green', 'b' => 'brown', 'c' => 'blue', 'red'
+         );
+$array2 = array('a' => 'green', 'yellow', 'red');
+
+echo '<br /><br />---- array_diff_assoc ----<br />';
+prettyPrintArray(array_diff_assoc($array1, $array2));
+
+
+
 # array_filter
 # array_values
 # array_filter - no callback
