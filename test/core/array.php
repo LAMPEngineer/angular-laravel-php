@@ -112,6 +112,15 @@ echo '<br /><br />---- array_diff_assoc ----<br />';
 prettyPrintArray(array_diff_assoc($array1, $array2));
 
 
+/*
+ * 6. array_diff_key(array $array, array ...$arrays): array
+ *      - Computes the difference of arrays using kays for comparison
+ */
+$array1 = array('blue' => 1, 'red' => 2, 'green' => 3, 'purple' => 4);
+$array2 = array('green' => 5, 'yellow' => 7, 'cyan' => 8);
+
+echo '<br />---- array_diff_key ----<br />';
+prettyPrintArray(array_diff_key($array1, $array2));
 
 # array_filter
 # array_values
