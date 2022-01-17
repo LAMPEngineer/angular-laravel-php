@@ -122,6 +122,49 @@ $array2 = array('green' => 5, 'yellow' => 7, 'cyan' => 8);
 echo '<br />---- array_diff_key ----<br />';
 prettyPrintArray(array_diff_key($array1, $array2));
 
+
+/*
+ * 7. array_diff_uassoc(array $array, array ...$arrays, callable $key_compare_func): assay
+ *    - Computes the difference of arrays with additional index check
+ *      whick is performed by a user supplied callback function
+ */
+function key_compare_func($a, $b)
+{
+    if($a === $b)return 0;
+
+    return ($a > $b) ? 1 : -1;
+}
+
+$array1 = array('a' => 'green', 'b' => 'brown', 'c' => 'blue', 'red');
+
+$array2 = array('a' => 'green', 'yellow', 'red');
+
+echo '---- array_diff_uassoc ----<br />';
+prettyPrintArray(array_diff_uassoc($array1, $array2, 'key_compare_func'));
+
+/*
+ * 8. array_diff_ukey()
+ *    - 
+ */
+
+
+/*
+ * 9. array_diff() 
+ *    - 
+ */
+
+
+/*
+ * 10. array_fill_keys()
+ *    - 
+ */
+
+
+
+/*
+ * 11. array_diff_ukey()
+ *    -
+ */
 # array_filter
 # array_values
 # array_filter - no callback
