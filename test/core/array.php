@@ -142,11 +142,26 @@ $array2 = array('a' => 'green', 'yellow', 'red');
 echo '---- array_diff_uassoc ----<br />';
 prettyPrintArray(array_diff_uassoc($array1, $array2, 'key_compare_func'));
 
-/*
- * 8. array_diff_ukey()
- *    - 
- */
 
+/*
+ * 8. array_diff_ukey(array $array, array ...$arrays, callable $kay_compare_func): array
+ *    - Computes the difference of arrays using a callable function 
+ *      on the kays for comparison
+ */
+function key_compare_function($key1, $key2)
+{
+    if($key1 === $key2) return 0;
+
+    return ($key1 > $key2) ? 1 : -1; 
+}
+
+$array1 = array('blue' => 1, 'red' => 2, 'green' => 3, 'purple' => 4);
+$array2 = array('green' => 5, 'blue' => 6, 'yellow' => 7, 'cyan' => 8);
+
+
+
+echo '---- array_diff_ukey ----<br />';
+prettyPrintArray(array_diff_ukey($array1, $array2, 'key_compare_function'));
 
 /*
  * 9. array_diff() 
