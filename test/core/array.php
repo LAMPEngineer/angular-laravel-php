@@ -163,10 +163,15 @@ $array2 = array('green' => 5, 'blue' => 6, 'yellow' => 7, 'cyan' => 8);
 echo '---- array_diff_ukey ----<br />';
 prettyPrintArray(array_diff_ukey($array1, $array2, 'key_compare_function'));
 
+
 /*
- * 9. array_diff() 
- *    - 
+ * 9. array_diff(array $array, array ...$arrays): array 
+ *    - computes difference of arrays
  */
+ $array3 = [2,5,9,130];
+ $array4 = [4, 12, 17];
+echo '---- array_diff ----<br />';
+prettyPrintArray(array_diff($array1, $array2, $array3, $array4));
 
 
 /*
