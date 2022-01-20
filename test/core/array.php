@@ -187,9 +187,17 @@ prettyPrintArray(array_fill_keys($keys, 'banana'));
 
 
 /*
- * 11. array_fill()
- *    -
+ * 11. array_fill(int $start_index, int $count, mixed $value): array
+ *    - Fill an array with values
+ *
+ * 
+ *  If start_index is negative, first index of returned array will be
+ *  start_index and following indices will start from zero
  */
+ echo '---- array_fill ----<br />';
+  prettyPrintArray(array_fill(5, 6, 'banana'));
+
+  prettyPrintArray(array_fill(-2, 4, 'pear'));
 
 
 /*
