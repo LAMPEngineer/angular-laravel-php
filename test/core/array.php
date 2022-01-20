@@ -174,17 +174,55 @@ echo '---- array_diff ----<br />';
 prettyPrintArray(array_diff($array1, $array2, $array3, $array4));
 
 
+
+
 /*
- * 10. array_fill_keys()
+ * 10. array_fill_keys(array $keys, mixed $value): array
+ *    - Fill an array with values, specifying keys
+ */
+
+$keys = ['foo', 5, 10, 'bar'];
+echo '---- array_fill_keys ----<br />';
+prettyPrintArray(array_fill_keys($keys, 'banana'));
+
+
+/*
+ * 11. array_fill()
+ *    -
+ */
+
+
+/*
+ * 12. array_filter()
+ *    - 
+ */
+
+
+/*
+ * 13. array_flip()
+ *    -
+ */
+
+
+/*
+ * 14. array_intersect_assoc()
+ *    - 
+ */
+
+
+/*
+ * 15. array_intersect_key()
+ *    -
+ */
+
+
+/*
+ * 16. array_intersect_uassoc ()
  *    - 
  */
 
 
 
-/*
- * 11. array_diff_ukey()
- *    -
- */
 # array_filter
 # array_values
 # array_filter - no callback
