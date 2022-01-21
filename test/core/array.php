@@ -208,6 +208,21 @@ echo '---- array_filter ----Even nos:<br />';
 $array = [1,2,3,4,5,6,7,8,9,10];
 prettyPrintArray(array_filter($array, fn ($number) => $number % 2 === 0, ARRAY_FILTER_USE_KEY));
 
+$arr = ['a' => 1, 'b' => 2, 'c' => 3, 'd' => 4 ];
+
+
+
+# case 1: ARRAY_FILTER_USE_KEY
+prettyPrintArray(array_filter($arr, fn ($k) => $k == 'b', ARRAY_FILTER_USE_KEY ));
+
+
+
+# case 2: ARRAY_FILTER_USE_BOTH
+prettyPrintArray(array_filter($arr, fn ($v, $k) =>
+     ($k == 'b' || $v == 4)
+, ARRAY_FILTER_USE_BOTH));
+
+
 
 /*
  * 13. array_flip()
