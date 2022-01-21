@@ -206,7 +206,7 @@ prettyPrintArray(array_fill_keys($keys, 'banana'));
  */
 echo '---- array_filter ----Even nos:<br />';
 $array = [1,2,3,4,5,6,7,8,9,10];
-prettyPrintArray(array_filter($array, fn ($number) => $number % 2 === 0));
+prettyPrintArray(array_filter($array, fn ($number) => $number % 2 === 0, ARRAY_FILTER_USE_KEY));
 
 
 /*
