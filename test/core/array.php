@@ -225,9 +225,13 @@ prettyPrintArray(array_filter($arr, fn ($v, $k) =>
 
 
 /*
- * 13. array_flip()
- *    -
+ * 13. array_flip(array $array): array
+ *    - Exchanges all keys with their associated values in an array
  */
+echo '---- array_flip ----';
+$arr = ['oranges', 'apples', 'pears'];
+prettyPrintArray(array_flip($arr));
+
 
 
 /*
