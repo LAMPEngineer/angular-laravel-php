@@ -236,8 +236,11 @@ prettyPrintArray(array_flip($arr));
 
 /*
  * 14. array_intersect_assoc()
- *    - 
+ *    - computes the intersection of arrays with additional index check
  */
+
+
+
 
 
 /*
@@ -246,10 +249,34 @@ prettyPrintArray(array_flip($arr));
  */
 
 
+
+
 /*
- * 16. array_intersect_uassoc ()
+ * 16. array_intersect_uassoc()
  *    - 
  */
+
+
+
+
+
+/*
+ * 17. array_intersect_ukey()
+ *    - 
+ */
+
+
+
+
+/*
+ * 18. array_intersect(array $array, array ...$arrays): array
+ *    - Computes the intersection of arrays
+ */
+$array1 = ['a' => 'green', 'red', 'blue'];
+$array2 = ['b' => 'green', 'yellow', 'red'];
+echo '---- array_intersect ----<br />';
+prettyPrintArray(array_intersect($array1, $array2));
+
 
 
 
