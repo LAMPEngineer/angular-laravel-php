@@ -245,7 +245,6 @@ prettyPrintArray(array_intersect_assoc($array1, $array2));
 
 
 
-
 /*
  * 15. array_intersect_key(array $array, array ...$arrays):array
  *    - computes intersection of arrays using keys for comparision
@@ -259,11 +258,13 @@ prettyPrintArray(array_intersect_key($array1, $array2));
 
 
 /*
- * 16. array_intersect_uassoc()
- *    - 
+ * 16. array_intersect_uassoc(array $array, array ...$arrays, callback $key_compare_func): array
+ *    - computes intersection of array with additional index check, compares indexes by a callback function
  */
-
-
+$array1 = ['a' => 'green', 'b' => 'brown', 'c' => 'blue', 'red'];
+$array2 = ['a' => 'GREEN', 'B' => 'brown', 'yellow', 'red'];
+echo '---- array_intersect_uassoc ----<br />';
+prettyPrintArray(array_intersect_uassoc($array1, $array2, 'strcasecmp'));
 
 
 
