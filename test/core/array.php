@@ -241,7 +241,7 @@ prettyPrintArray(array_flip($arr));
 $array1 = ['a' => 'green', 'b' => 'brown', 'c' => 'blue', 'red'];
 $array2 = ['a' => 'green', 'yellow', 'blue', 'red'];
 echo '---- array_intersect_assoc ----<br />';
-prettyPrintArray(array_intersect_assoc($array1, $array2));
+prettyPrintArray(array_intersect_assoc($array1, $array2));//['a'=>'green']
 
 
 
@@ -252,7 +252,7 @@ prettyPrintArray(array_intersect_assoc($array1, $array2));
 $array1 = ['blue' => 1, 'red' => 2, 'green' => 3, 'purple' => 4];
 $array2 = ['green' => 5, 'blue' => 6, 'yellow' => 7, 'cyan' => 8];
 echo '---- array_intersect_key ----<br />';
-prettyPrintArray(array_intersect_key($array1, $array2));
+prettyPrintArray(array_intersect_key($array1, $array2));//['blue'=>1, 'green'=>3]
 
 
 
@@ -264,15 +264,27 @@ prettyPrintArray(array_intersect_key($array1, $array2));
 $array1 = ['a' => 'green', 'b' => 'brown', 'c' => 'blue', 'red'];
 $array2 = ['a' => 'GREEN', 'B' => 'brown', 'yellow', 'red'];
 echo '---- array_intersect_uassoc ----<br />';
-prettyPrintArray(array_intersect_uassoc($array1, $array2, 'strcasecmp'));
+prettyPrintArray(array_intersect_uassoc($array1, $array2, 'strcasecmp'));//['b'=>'brown']
 
 
 
 /*
- * 17. array_intersect_ukey()
- *    - 
+ * 17. array_intersect_ukey(array $array, array ...$keys, $key_compare_func): array
+ *    - computes intersetion of arrays using a callback function on the keys for comparision
  */
+function key_compare_func1($key1, $key2)
+{
+    if($key1 == $key2) return 0;
 
+    $key = ($key1 > $key2)? 1 : -1;
+
+    return $key;
+}
+
+$array1 = ['blue' => 1, 'red' => 2, 'green' => 3, 'purple' => 4];
+$array2 = ['green' => 5, 'blue' => 6, 'yellow' => 7, 'cyan' => 8];
+echo '---- array_intersect_ukey ----<br />';
+prettyPrintArray(array_intersect_ukey($array1, $array2, 'key_compare_func1'));//['blue'=>1, 'green'=>3]
 
 
 
@@ -288,9 +300,8 @@ prettyPrintArray(array_intersect($array1, $array2));
 
 
 
-# array_filter
+
 # array_values
-# array_filter - no callback
 # array_keys
 # array_map
 # array_merge
