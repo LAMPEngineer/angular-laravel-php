@@ -7,5 +7,5 @@
 - **[Nullsafe operator](https://wiki.php.net/rfc/nullsafe_operator)**
 - **[Named Arguments](https://www.php.net/releases/8.0/en.php#named-arguments)**
 - **[Constructor property promotion](https://wiki.php.net/rfc/constructor_promotion)**
-- **[]()**
+- **[Array is List](https://www.php.net/manual/en/function.array-is-list.php)**
 - **[]()**
