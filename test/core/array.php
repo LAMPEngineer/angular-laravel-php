@@ -319,10 +319,29 @@ var_dump(array_is_list([0=>'apple','foo'=>'orange']));//false
 echo '<br />Non-consecutive keys: ';
 var_dump(array_is_list([0=>'apple',2=>'orange']));//false
 
+
 /*
- * 20. array_key_exists()
- *    - 
+ * 20. array_key_exists(string|int $ksy, array $array): bool
+ *    - Ckecks if the given key or index exists in the array
  */
+$array = ['first'=>1,'second'=>2,'third'=>3];
+echo '<br /><br />---- array_key_exists ----<br />';
+var_dump(array_key_exists('first', $array));
+
+
+/* array_key_exists() vs isset()
+ *
+ * isset() does not return 'true' for array keys that correspond 
+ * to a null value, while array_key_exists() does
+ */
+echo '<br /><br />----array_key_exists vs isset <br /> isset: ';
+$array = ['first' => null, 'second' => 4];
+var_dump(isset($array['first']));//false
+
+echo '<br />array_key_exists: ';
+var_dump(array_key_exists('first', $array));//true
+
+
 
 
 /*
