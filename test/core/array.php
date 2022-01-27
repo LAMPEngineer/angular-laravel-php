@@ -299,6 +299,95 @@ prettyPrintArray(array_intersect($array1, $array2));
 
 
 
+/*
+ * 19. array_is_list(array $array): bool
+ *    - Checks whether a given array is a list
+ */
+echo '---- array_is_list ----<br />';
+$array = [0 => 'apple', 2, 3];
+var_dump(array_is_list($array));//true
+
+echo '<br />array does not start with 0: ';
+var_dump(array_is_list([1=>'apple','orange']));//false,
+
+echo '<br />Keys are not in correct order: ';
+var_dump(array_is_list([1=>'apple',0=>'orange']));//false
+
+echo '<br />Non-integer keys: ';
+var_dump(array_is_list([0=>'apple','foo'=>'orange']));//false
+
+echo '<br />Non-consecutive keys: ';
+var_dump(array_is_list([0=>'apple',2=>'orange']));//false
+
+/*
+ * 20. array_key_exists()
+ *    - 
+ */
+
+
+/*
+ * 21. array_key_first()
+ *    - 
+ */
+
+
+
+/*
+ * 22. array_key_last()
+ *    - 
+ */
+
+
+/*
+ * 23. array_keys()
+ *    - 
+ */
+
+
+/*
+ * 24. array_()
+ *    - 
+ */
+
+
+
+/*
+ * 25. array_map()
+ *    - 
+ */
+
+
+/*
+ * 26. array_()
+ *    - 
+ */
+
+
+
+/*
+ * 27. array_()
+ *    - 
+ */
+
+
+/*
+ * 28. array_()
+ *    - 
+ */
+
+
+/*
+ * 29. array_()
+ *    - 
+ */
+
+
+
+/*
+ * 30. array_()
+ *    - 
+ */
+
 
 
 # array_values
