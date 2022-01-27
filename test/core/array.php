@@ -342,6 +342,12 @@ echo '<br />array_key_exists: ';
 var_dump(array_key_exists('first', $array));//true
 
 
+/* Case: array_key_exists() will search for the keys in first dimension
+ * only. Nested keys in multidimensional arrays will not be found 
+ */
+
+echo '<br /> array_key_exists() with multidimensional array<br/>: ';
+var_dump(array_key_exists('last_name', $records));//false
 
 
 /*
