@@ -351,16 +351,22 @@ var_dump(array_key_exists('last_name', $records));//false
 
 
 /*
- * 21. array_key_first()
- *    - 
+ * 21. array_key_first(array $array): int|string|null
+ *    - Gets the first key of an array
  */
-
+$array = ['a' => 1, 'b' => 2, 'c' => 3];
+echo '<br />---- array_key_first ----<br />';
+var_dump(array_key_first($array));
 
 
 /*
- * 22. array_key_last()
- *    - 
+ * 22. array_key_last(array $array): int|string|null
+ *    - Gets the last key of an array
  */
+echo '<br />---- array_key_last ----<br />';
+var_dump(array_key_last($array));//'c'
+echo '<br /> array_key_last() vs end(): ';
+var_dump(end($array));//1, end() returns value
 
 
 /*
