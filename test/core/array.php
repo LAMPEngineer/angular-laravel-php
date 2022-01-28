@@ -431,9 +431,37 @@ prettyPrintArray(array_map(null, $array1, $array2));
 
 
 /*
- * 25. array_merge()
- *    - 
+ * 25. array_merge(array ...$arrays): array
+ *    - Merge one or more arrays
  */
+$array1 = [1,2,3];
+$array2 = [4,5,6];
+$array3 = [7,8,9];
+
+echo '<br />---- array_merge ----<br />';
+prettyPrintArray(array_merge($array1, $array2, $array3));
+
+
+
+/*case1: if imput array have numeric keys, later values not overwrite 
+the original values, but will append*/
+$array1 = [1,2,3];
+$array2 = [6 => 4, 7 => 5, 8 => 6];
+$array3 = [7,8,9];
+
+echo '<br /> imput array with numric keys:<br />';
+prettyPrintArray(array_merge($array1, $array2, $array3));
+
+
+
+/*case2: if imput array have string keys, later values will overwrite 
+the original values*/
+$array1 = [1,2,3];
+$array2 = ['a' => 4, 'b' => 5, 'c' => 6];
+$array3 = [7,8,9];
+
+echo '<br /> imput array with string keys:<br />';
+prettyPrintArray(array_merge($array1, $array2, $array3));
 
 
 
@@ -444,16 +472,19 @@ prettyPrintArray(array_map(null, $array1, $array2));
 
 
 
+
 /*
  * 27. array_()
  *    - 
  */
 
 
+
 /*
  * 28. array_()
  *    - 
  */
+
 
 
 /*
