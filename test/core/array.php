@@ -365,6 +365,8 @@ var_dump(array_key_first($array));
  */
 echo '<br />---- array_key_last ----<br />';
 var_dump(array_key_last($array));//'c'
+
+
 echo '<br /> array_key_last() vs end(): ';
 var_dump(end($array));//1, end() returns value
 
@@ -395,9 +397,26 @@ prettyPrintArray(array_keys($array, '15', true));
 
 
 /*
- * 24. array_map()
- *    - 
+ * 24. array_map(?callback $callback, array $array, array ...$arrays): array
+ *    - Applies callback to the elements of given arrays
  */
+$array = [1,2,3,4,5,6,];
+echo '<br />---- array_map ----<br />';
+prettyPrintArray(array_map(fn($num) => $num * 3, $array));
+
+
+/*multiple arrays*/
+$array1 = ['a' => 1, 'b' => 2, 'c' => 3];
+$array2 = ['d' => 4, 'e' => 5, 'f' => 6];
+echo 'array_map with multiple arrays:<br />';
+prettyPrintArray(array_map(fn($num1, $num2) => $num1 * $num2, $array1, $array2));
+
+
+/*multiple arrays with uneven length*/
+$array1 = ['a' => 1, 'b' => 2, 'c' => 3];
+$array2 = ['d' => 4, 'e' => 5];
+echo 'array_map with uneven length multiple arrays:<br />';
+prettyPrintArray(array_map(fn($num1, $num2) => $num1 + $num2, $array1, $array2));
 
 
 
