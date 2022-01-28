@@ -466,12 +466,26 @@ prettyPrintArray(array_merge($array1, $array2, $array3));
 
 
 /*
- * 26. array_merge_recursive()
- *    - 
+ * 26. array_merge_recursive(array ...$arrays): array
+ *    - merge one or more arrays recursively
+ *
+ * cases:
+ * i. if input array have string keys, the values for these keys are 
+ * merge together into an array, and this is done recursively
+ *
+ * ii. if one of the value itself is an array, the function will merge 
+ * it with a corresponding entery in another array too
+ *
+ * iii. if array have numeric key, the later value will not overwrite 
+ * the original value, but will append
+ * 
  */
+$arr1 = ['color' => ['favorite' => 'red'], 5];
+$arr2 = [10, 'color' => ['favorite' => 'green', 'blue']];
 
-
-
+echo '<br />---- array_merge_recursive ----<br />';
+prettyPrintArray(array_merge_recursive($arr1, $arr2));
+//prettyPrintArray(array_merge($arr1, $arr2));
 
 /*
  * 27. array_()
