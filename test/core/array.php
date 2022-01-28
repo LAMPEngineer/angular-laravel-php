@@ -412,11 +412,21 @@ echo 'array_map with multiple arrays:<br />';
 prettyPrintArray(array_map(fn($num1, $num2) => $num1 * $num2, $array1, $array2));
 
 
+
 /*multiple arrays with uneven length*/
 $array1 = ['a' => 1, 'b' => 2, 'c' => 3];
 $array2 = ['d' => 4, 'e' => 5];
 echo 'array_map with uneven length multiple arrays:<br />';
 prettyPrintArray(array_map(fn($num1, $num2) => $num1 + $num2, $array1, $array2));
+
+
+
+/* Special case:
+ * It constructs an array of arrays by using 'null' as the name of 
+ * callback function
+ */
+echo 'construct array of arrays by using \'null\' as name of callback function:<br />';
+prettyPrintArray(array_map(null, $array1, $array2));
 
 
 
