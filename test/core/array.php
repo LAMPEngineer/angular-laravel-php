@@ -370,26 +370,46 @@ var_dump(end($array));//1, end() returns value
 
 
 /*
- * 23. array_keys()
+ * 23. array_keys(array $array): array
+ *
+ * array_keys(array $array, mixed $search_value, bool $strict=false): array
+ * 
+ *    
+ *    
+ *    - returns all keys or a subset of keys of an array 
+ */
+$array = ['a' => 5, 'b' => 10, 'c' => 15, 'd' => 5, 'e' => 10];
+echo '<br /><br />---- array_keys ----<br />';
+prettyPrintArray(array_keys($array));
+
+
+# case1:
+echo 'array_keys with search value:<br />';
+prettyPrintArray(array_keys($array, 10));
+
+
+#case2:
+echo 'array_keys with search value and strict comparision:<br />';
+prettyPrintArray(array_keys($array, '15', true));
+
+
+
+/*
+ * 24. array_map()
  *    - 
  */
 
 
+
 /*
- * 24. array_()
+ * 25. array_merge()
  *    - 
  */
 
 
 
 /*
- * 25. array_map()
- *    - 
- */
-
-
-/*
- * 26. array_()
+ * 26. array_merge_recursive()
  *    - 
  */
 
