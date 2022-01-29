@@ -9,4 +9,10 @@
 - **[Constructor property promotion](https://wiki.php.net/rfc/constructor_promotion)**
 - **[Array is List](https://www.php.net/manual/en/function.array-is-list.php)**
 - **[Spaceship Operator](https://wiki.php.net/rfc/combined-comparison-operator)**
-- 
+- **[]()**
+- **[]()**
+- **[]()**
+- **[]()**
+- **[]()**
+- **[]()**
+- **[]()**
