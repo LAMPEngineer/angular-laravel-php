@@ -7,7 +7,7 @@
 
 ## PHP 8.0
 - **[Match expression](https://wiki.php.net/rfc/match_expression_v2)**
-- **[]()**
+- **[Mixed type](https://php.watch/versions/8.0/mixed-type)**
 
 ## PHP 7.0
 - **[Spaceship Operator](https://wiki.php.net/rfc/combined-comparison-operator)**

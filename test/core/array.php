@@ -528,9 +528,12 @@ prettyPrintArray($ar);
 
 
 /*
- * 28. array_pad()
- *    - 
+ * 28. array_pad(array $array, int $lungth, mixed $value): array
+ *    - Pad array to the specified length with a value
  */
+
+
+
 
 
 
