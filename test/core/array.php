@@ -561,17 +561,24 @@ prettyPrintArray($stack);
 echo 'pop = '.$fruit;
 
 
+
 /*
- * 30. array_product()
+ * 30. array_push(array &$array, mixed ...$values): int
+ *    - Push one or more elements onto the end array
+ */
+echo '<br />---- array_push ----<br />';
+$stack = ['orange', 'banana'];
+array_push($stack, 'apple', 'raspberry');
+prettyPrintArray($stack);
+
+
+
+/*
+ * 31. array_product()
  *    - 
  */
 
 
-
-/*
- * 31. array_push()
- *    - 
- */
 
 
 
@@ -586,6 +593,7 @@ echo 'pop = '.$fruit;
  * 33. array_reduce()
  *    - 
  */
+
 
 
 /*
