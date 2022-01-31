@@ -487,32 +487,126 @@ echo '<br />---- array_merge_recursive ----<br />';
 prettyPrintArray(array_merge_recursive($arr1, $arr2));
 //prettyPrintArray(array_merge($arr1, $arr2));
 
+
+
 /*
- * 27. array_()
+ * 27. array_multisort(
+ * array &$array1,
+ * mixed $array1_sort_order = SORT_ASC,
+ * mixed $array1_sort_flag = SORT_REGULAR,
+ * mixed ...$rest
+ * ): bool
+ * 
+ *    - Sort multiple or multi-dimensional arrays
+ */
+echo '<br />---- array_multisort ----<br />';
+# sorting single array
+$arr = ['green','cyan','yellow','blue','orange','black'];
+array_multisort($arr, SORT_ASC, SORT_STRING);
+prettyPrintArray($arr);
+
+
+
+# sorting multiple arrays
+$arr1 = [10,100,100,0];
+$arr2 = [1,3,2,4];
+$arr3 = ['c','d','a','y'];
+array_multisort($arr1, $arr2, $arr3);
+prettyPrintArray($arr1);
+prettyPrintArray($arr2);
+prettyPrintArray($arr3);
+
+
+
+# sorting multidimensionl array
+$ar = [['10',11,100,100,'a'],[1,2,'2',3,1]];
+array_multisort($ar[0], SORT_ASC, SORT_STRING,
+                $ar[1], SORT_NUMERIC, SORT_DESC);
+prettyPrintArray($ar);
+
+
+
+
+/*
+ * 28. array_pad()
  *    - 
  */
 
 
 
 /*
- * 28. array_()
+ * 29. array_pop()
  *    - 
  */
 
 
 
 /*
- * 29. array_()
+ * 30. array_product()
  *    - 
  */
 
 
 
 /*
- * 30. array_()
+ * 31. array_push()
  *    - 
  */
 
+
+
+/*
+ * 32. array_rand()
+ *    - 
+ */
+
+
+
+/*
+ * 33. array_reduce()
+ *    - 
+ */
+
+
+/*
+ * 34. array_replace()
+ *    - 
+ */
+
+
+
+/*
+ * 35. array_replace_recursive()
+ *    - 
+ */
+
+
+
+/*
+ * 36. array_reverse()
+ *    - 
+ */
+
+
+
+/*
+ * 37. array_search()
+ *    - 
+ */
+
+
+
+/*
+ * 38. array_()
+ *    - 
+ */
+
+
+
+/*
+ * 39. array_()
+ *    - 
+ */
 
 
 # array_values
