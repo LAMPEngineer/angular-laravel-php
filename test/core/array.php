@@ -548,10 +548,17 @@ prettyPrintArray(array_pad($arr, 2, 'noop'));// not padded
 
 
 /*
- * 29. array_pop()
- *    - 
+ * 29. array_pop(
+ * array &$array): mixed
+ *    - Pop the element off the end of array
  */
+echo '<br />---- array_pop ----<br />';
+$stack = ['orange', 'banana', 'apple', 'raspberry'];
+$fruit = array_pop($stack);
+prettyPrintArray($stack);
 
+//raspberry assign to $fruit
+echo 'pop = '.$fruit;
 
 
 /*
