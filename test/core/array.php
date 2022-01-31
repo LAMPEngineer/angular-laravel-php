@@ -531,7 +531,17 @@ prettyPrintArray($ar);
  * 28. array_pad(array $array, int $lungth, mixed $value): array
  *    - Pad array to the specified length with a value
  */
+echo '<br />---- array_pad ----<br />';
+$arr = [12,10,9];
 
+# case 1:
+prettyPrintArray(array_pad($arr, 5, 0));//12, 10, 9, 0, 0
+
+# case 2:
+prettyPrintArray(array_pad($arr, -7, -1));//-1, -1, -1, -1, 12, 10, 9
+
+# case 3:
+prettyPrintArray(array_pad($arr, 2, 'noop'));// not padded
 
 
 
