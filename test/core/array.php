@@ -581,12 +581,15 @@ echo 'array_product='.array_product($arr);
 
 
 
-
 /*
- * 32. array_rand()
- *    - 
+ * 32. array_rand(array $array, int $num = 1): int|string|array
+ *    - Pick one or more random keys out of an array
  */
-
+$input = array('Neo', 'Morpheus', 'Trinity', 'Cypher', 'Tank');
+$rand_keys = array_rand($input, 2);
+echo '<br />---- array_rand ----<br />';
+echo 'One= '.$input[$rand_keys[0]]. "<br />";
+echo 'Two= '.$input[$rand_keys[1]]. "<br />";
 
 
 /*
