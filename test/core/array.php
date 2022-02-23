@@ -548,8 +548,7 @@ prettyPrintArray(array_pad($arr, 2, 'noop'));// not padded
 
 
 /*
- * 29. array_pop(
- * array &$array): mixed
+ * 29. array_pop(array &$array): mixed
  *    - Pop the element off the end of array
  */
 echo '<br />---- array_pop ----<br />';
@@ -574,10 +573,11 @@ prettyPrintArray($stack);
 
 
 /*
- * 31. array_product()
- *    - 
+ * 31. array_product(array $array): int|float
+ *    - Calculate the product of values in an array
  */
-
+echo '<br />---- array_product ----<br />';
+echo 'array_product='.array_product($arr);
 
 
 
