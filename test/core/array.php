@@ -593,11 +593,24 @@ echo 'Two= '.$input[$rand_keys[1]]. "<br />";
 
 
 /*
- * 33. array_reduce()
- *    - 
+ * 33. array_reduce(array $array, callable $callback, mixed $initial = null) :mixed
+ *    - Iteratively reduce array to a single valye using a callback funtion
  */
+$invoiceItems = [
+['price' => 9.99, 'qty' => 3, 'desc' => 'Item 1'],
+['price' => 29.99, 'qty' => 1, 'desc' => 'Item 2'],
+['price' => 149, 'qty' => 1, 'desc' => 'Item 3'],
+['price' => 14.99, 'qty' => 2, 'desc' => 'Item 4'],
+['price' => 4.99, 'qty' => 4, 'desc' => 'Item 5'],
+];
 
+$total = array_reduce(
+    $invoiceItems, 
+    fn ($sum, $item) => $sum + $item['qty'] * $item['price']
+);
 
+echo '<br />---- array_reduce ----<br />';
+echo 'Total Invoice ='. $total;
 
 /*
  * 34. array_replace()
