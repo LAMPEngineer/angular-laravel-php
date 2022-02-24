@@ -630,8 +630,12 @@ prettyPrintArray($basket);
  * 35. array_replace_recursive()
  *    - 
  */
+$base = ['citrus' => ['orange'], 'berries' => ['blackberry', 'raspberry']];
+$replace = ['citrus' => ['pineapple'], 'berries' => ['blueberry']];
+$basket = array_replace_recursive($base, $replace);
 
-
+echo '<br />---- array_replace_recursive ----<br />';
+prettyPrintArray($basket);
 
 /*
  * 36. array_reverse()
