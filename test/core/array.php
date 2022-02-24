@@ -587,7 +587,7 @@ echo 'array_product='.array_product($arr);
  */
 $input = array('Neo', 'Morpheus', 'Trinity', 'Cypher', 'Tank');
 $rand_keys = array_rand($input, 2);
-echo '<br />---- array_rand ----<br />';
+echo '<br /><br />---- array_rand ----<br />';
 echo 'One= '.$input[$rand_keys[0]]. "<br />";
 echo 'Two= '.$input[$rand_keys[1]]. "<br />";
 
@@ -612,12 +612,19 @@ $total = array_reduce(
 echo '<br />---- array_reduce ----<br />';
 echo 'Total Invoice ='. $total; //258.9 & with initial value = 758.9
 
+
 /*
- * 34. array_replace()
- *    - 
+ * 34. array_replace(array $array, array ...$replacements): array
+ *    - Replases elements from passed arrays into the first array
  */
+$base = ['orange', 'banana', 'apple', 'raspberry'];
+$replace1 = [0 => 'pineapple', 4 => 'cherry'];
+$replace2 = [0 => 'grape'];
 
+$basket = array_replace($base, $replace1, $replace2);
 
+echo '<br /><br />---- array_replace ----<br />';
+prettyPrintArray($basket);
 
 /*
  * 35. array_replace_recursive()
