@@ -606,11 +606,11 @@ $invoiceItems = [
 
 $total = array_reduce(
     $invoiceItems, 
-    fn ($sum, $item) => $sum + $item['qty'] * $item['price']
+    fn ($sum, $item) => $sum + $item['qty'] * $item['price'], 500
 );
 
 echo '<br />---- array_reduce ----<br />';
-echo 'Total Invoice ='. $total;
+echo 'Total Invoice ='. $total; //258.9 & with initial value = 758.9
 
 /*
  * 34. array_replace()
