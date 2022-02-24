@@ -638,10 +638,17 @@ echo '<br />---- array_replace_recursive ----<br />';
 prettyPrintArray($basket);
 
 /*
- * 36. array_reverse()
- *    - 
+ * 36. array_reverse(array $array, bool $preserve_key = false): array
+ *    - return an array with elements in reverse order
  */
+ $input = ['php', 4.0, ['green', 'red']];
+ $reversed = array_reverse($input);
+ $preserved = array_reverse($input, true);
 
+echo '<br />---- array_reverse ----<br />';
+echo 'input array: ';prettyPrintArray($input);
+echo 'reversed array: ';prettyPrintArray($reversed);
+echo 'preserved array: ';prettyPrintArray($preserved);
 
 
 /*
