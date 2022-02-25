@@ -661,11 +661,15 @@ $key = array_search('D', $array);
 echo '<br /><br />---- array_search ----<br />'; 
 var_dump($key);
 
-/*
- * 38. in_array()
- *    - 
- */
 
+/*
+ * 38. in_array(mixed $needle, array $haystack, bool $strict = false): bool
+ *    - Checks if a value exists in an array
+ */
+echo '<br /><br />---- in_array ----<br />'; 
+ if(in_array('a', $array)){
+    echo 'Letter found';
+ }
 
 
 /*
