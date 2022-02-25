@@ -652,14 +652,17 @@ echo 'preserved array: ';prettyPrintArray($preserved);
 
 
 /*
- * 37. array_search()
- *    - 
+ * 37. array_search(mixed $needle, array $haystack, bool $strict = false): int|string|false
+ *    - Searches array for a given value and returns first corresponding key if successful
  */
+$array = ['a', 'b', 'c', 'D', 'E', 'ab', 'bc', 'cd', 'b', 'd'];
+$key = array_search('D', $array);
 
-
+echo '<br /><br />---- array_search ----<br />'; 
+var_dump($key);
 
 /*
- * 38. array_()
+ * 38. in_array()
  *    - 
  */
 
@@ -667,6 +670,32 @@ echo 'preserved array: ';prettyPrintArray($preserved);
 
 /*
  * 39. array_()
+ *    - 
+ */
+
+
+/*
+ * 40. array_()
+ *    - 
+ */
+
+
+
+/*
+ * 41. array_()
+ *    - 
+ */
+
+
+/*
+ * 42. array_()
+ *    - 
+ */
+
+
+
+/*
+ * 43. array_()
  *    - 
  */
 
