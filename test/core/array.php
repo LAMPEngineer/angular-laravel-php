@@ -673,10 +673,13 @@ echo '<br /><br />---- in_array ----<br />';
 
 
 /*
- * 39. array_()
- *    - 
+ * 39. array_shift(array &$array): mixed
+ *    - Shift an element off the begining of array
  */
-
+ $stack = ['orange', 'banana', 'apple', 'raspberry'];
+ $fruit = array_shift($stack);
+ echo '<br /><br />---- array_shift ----<br />'; 
+ prettyPrintArray($stack);
 
 /*
  * 40. array_()
