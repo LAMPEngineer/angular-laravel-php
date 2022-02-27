@@ -682,10 +682,18 @@ echo '<br /><br />---- in_array ----<br />';
  prettyPrintArray($stack);
 
 /*
- * 40. array_()
- *    - 
+ * 40. array_slice(
+ * array $array,
+ * int $offset,
+ * ?int $length = null,
+ * bool $preserve_keys = false
+ * ): array
+ *    - Extract a sclice of array
  */
-
+$input = ['a', 'b', 'c', 'd', 'e'];
+echo '<br /><br />---- array_slice ----<br />'; 
+prettyPrintArray(array_slice($input, 0, 3)); // [a, b, c]
+prettyPrintArray(array_slice($input, -2, 1)); // [d]
 
 
 /*
