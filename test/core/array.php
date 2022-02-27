@@ -697,9 +697,18 @@ prettyPrintArray(array_slice($input, -2, 1)); // [d]
 
 
 /*
- * 41. array_()
- *    - 
+ * 41. array_splice(
+ *  array &$input,
+ *  int $offset,
+ *  ?int $length = null,
+ *  mixed $replacement = []
+ * )
+ *    - Remove a portion of array and replace it with something else
  */
+$input = ['red', 'green', 'blue', 'yellow'];
+array_splice($input, -1, 1, array("black", "maroon"));
+echo '<br /><br />---- array_splice ----<br />'; 
+prettyPrintArray($input); // [red, green, blue, black, maroon]
 
 
 /*
