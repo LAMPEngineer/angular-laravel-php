@@ -712,14 +712,61 @@ prettyPrintArray($input); // [red, green, blue, black, maroon]
 
 
 /*
- * 42. array_()
+ * 42. array_sum(array $array): int|float
+ *    - returns the sum of values in an array
+ */
+echo '<br /><br />---- array_sum ----<br />';
+ $a = [2, 4, 6, 8];
+
+ echo "sum(a) = " . array_sum($a) . "<br />";
+ $b = ['a' => 1.2, 'b' => 2.3, 'c' => 3.4];
+ echo "sum(b) = ". array_sum($b);
+
+
+/*
+ * 43. array_()
  *    - 
  */
 
 
 
 /*
- * 43. array_()
+ * 44. array_()
+ *    - 
+ */
+
+
+
+/*
+ * 45. array_()
+ *    - 
+ */
+
+
+
+/*
+ * 46. array_()
+ *    - 
+ */
+
+
+
+/*
+ * 47. array_()
+ *    - 
+ */
+
+
+
+/*
+ * 48. array_()
+ *    - 
+ */
+
+
+
+/*
+ * 49. array_()
  *    - 
  */
 
