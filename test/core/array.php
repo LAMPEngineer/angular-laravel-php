@@ -724,10 +724,39 @@ echo '<br /><br />---- array_sum ----<br />';
 
 
 /*
- * 43. array_()
- *    - 
+ * 43. array_udiff(array $array, array ...$arrays, callable $value_compare_func): array
+ *    - computes difference of array by using a callback function for data comparison
  */
+ $arr1 = [new stdclass, new stdclass, new stdclass, new stdclass];
 
+ $arr2 = [new stdclass, new stdclass];
+ $arr1[0]->width = 11; $arr1[0]->height = 3;
+ $arr1[1]->width = 7; $arr1[1]->height = 1;
+ $arr1[2]->width = 2; $arr1[2]->height = 9;
+ $arr1[3]->width = 5; $arr1[3]->height = 7;
+
+ $arr2[0]->width = 7; $arr2[0]->height = 5;
+ $arr2[1]->width = 9; $arr2[1]->height = 2;
+
+ function compare_by_area($a, $b){
+    $areaA = $a->width * $a->height;
+    $areaB = $b->width * $b->height;
+
+    if ($areaA < $areaB) {
+        return -1;
+    } elseif ($areaA > $areaB){
+        return 1;
+    } else {
+        return 0;
+    }
+
+ }
+ 
+ echo '<br /><br />---- array_udiff ----<br />';
+ prettyPrintArray($arr1);
+ prettyPrintArray($arr2);
+ echo 'Difference:';
+ prettyPrintArray(array_udiff($arr1, $arr2, 'compare_by_area'));
 
 
 /*
