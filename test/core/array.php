@@ -727,6 +727,8 @@ echo '<br /><br />---- array_sum ----<br />';
  * 43. array_udiff(array $array, array ...$arrays, callable $value_compare_func): array
  *    - computes difference of array by using a callback function for data comparison
  */
+
+  /*case1: stdclass object*/
  $arr1 = [new stdclass, new stdclass, new stdclass, new stdclass];
 
  $arr2 = [new stdclass, new stdclass];
@@ -758,23 +760,30 @@ echo '<br /><br />---- array_sum ----<br />';
  echo 'Difference:';
  prettyPrintArray(array_udiff($arr1, $arr2, 'compare_by_area'));
 
+ 
+ /*case2: DateTime object
+  *       BookMyCalender.php script
+  */
+  
+
+
 
 /*
- * 44. array_()
+ * 44. array_unique()
  *    - 
  */
 
 
 
 /*
- * 45. array_()
+ * 45. array_unshift()
  *    - 
  */
 
 
 
 /*
- * 46. array_()
+ * 46. array_values()
  *    - 
  */
 
