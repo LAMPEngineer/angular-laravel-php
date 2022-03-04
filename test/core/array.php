@@ -769,9 +769,13 @@ echo '<br /><br />---- array_sum ----<br />';
 
 
 /*
- * 44. array_unique()
- *    - 
+ * 44. array_unique(array $array, int $flags = SORT_STRING): array
+ *    - Removes duplicate values from an array
  */
+  $arr = ['a' => 'green', 'red', 'b' => 'green', 'blue', 'red'];
+
+  echo '<br /><br />---- array_unique ----<br />'; 
+  prettyPrintArray(array_unique($arr));
 
 
 
