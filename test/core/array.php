@@ -792,11 +792,12 @@ echo '<br /><br />---- array_sum ----<br />';
 
 
 /*
- * 46. array_values()
- *    - 
+ * 46. array_values(array $array): array
+ *    - return all values of an array
  */
-
-
+ echo '<br /><br />---- array_values ----<br />';  
+ prettyPrintArray(array_values($arr));
+ 
 
 /*
  * 47. array_()
