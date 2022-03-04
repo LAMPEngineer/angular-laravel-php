@@ -780,9 +780,14 @@ echo '<br /><br />---- array_sum ----<br />';
 
 
 /*
- * 45. array_unshift()
- *    - 
+ * 45. array_unshift(array &$array, mixed ...$values): int
+ *    - prepend one or more elements to the beginning of an array
  */
+ $queue = ['orange', 'banana'];
+ array_unshift($queue, 'apple', 'raspberry');
+
+ echo '<br /><br />---- array_unshift ----<br />';
+ prettyPrintArray($queue);
 
 
 
