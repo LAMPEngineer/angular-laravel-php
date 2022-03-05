@@ -800,10 +800,29 @@ echo '<br /><br />---- array_sum ----<br />';
  
 
 /*
- * 47. array_()
- *    - 
+ * 47. array_walk(array|object &$array, callable $callback, mixed $arg = null): bool
+ *    - apply a user supplied function to every member of an array. 
  */
+  $fruits = ['d' => 'lemon', 'a' => 'orange', 'b' => 'banana', 'c' => 'apple'];
 
+  function test_alter(&$item1, $key, $prefix)
+  {
+    $item1 = "$prefix. $item1";
+  }
+
+  function test_print($item2, $key)
+  {
+    echo "$key. $item2 <br />";
+  }
+
+  echo '<br /><br />---- array_walk ----<br />';
+  echo "Before...:<br />";
+  array_walk($fruits, 'test_print');
+  
+  array_walk($fruits, 'test_alter', 'fruit');
+  echo "<br />... and after:<br />";
+
+  array_walk($fruits, 'test_print');
 
 
 /*
