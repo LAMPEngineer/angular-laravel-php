@@ -823,32 +823,3 @@ echo '<br /><br />---- array_sum ----<br />';
   echo "<br />... and after:<br />";
 
   array_walk($fruits, 'test_print');
-
-
-/*
- * 48. array_()
- *    - 
- */
-
-
-
-/*
- * 49. array_()
- *    - 
- */
-
-
-# array_values
-# array_keys
-# array_map
-# array_merge
-# array_reduce
-# array_search
-# in_array
-# array_diff
-# array_diff_assoc
-# array_diff_keys
-# asort
-# ksort
-# usort
-# Array destructuring
