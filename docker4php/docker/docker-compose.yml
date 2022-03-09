@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3.3'
 
 services:
   app:
@@ -8,7 +8,7 @@ services:
     container_name: docker4php-app
     restart: always
     working_dir: /var/www
-    volume:
+    volumes:
       - ../src:/var/www
   nginx:
     image: nginx:1.19-alpine
@@ -16,6 +16,6 @@ services:
     restart: always
     ports:
       - 8000:80
-    volume:
+    volumes:
       - ../src/:/var/www
       - ./nginx:/etc/nginx/conf.d
