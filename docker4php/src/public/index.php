@@ -1,3 +1,3 @@
-<?php phpinfo();
-
-  
+# src/public/index.php
+<?php
+echo phpinfo();

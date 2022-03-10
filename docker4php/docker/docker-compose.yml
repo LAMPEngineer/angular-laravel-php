@@ -15,7 +15,7 @@ services:
     container_name: docker4php-nginx
     restart: always
     ports:
-      - 8000:80
+      - 8001:80
     volumes:
       - ../src/:/var/www
       - ./nginx:/etc/nginx/conf.d
