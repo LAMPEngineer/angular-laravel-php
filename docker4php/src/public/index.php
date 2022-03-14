@@ -5,9 +5,10 @@
 
 
  // Classes & Objects
- $transaction = (new Transaction(100, 'Transaction 1'))
-                ->addTax(8)
-                ->applyDiscount(10);
+ $amount = (new Transaction(100, 'Transaction 1'))
+            ->addTax(8)
+            ->applyDiscount(10)
+            ->getAmount();
 
 
- var_dump($transaction->getAmount());
+ var_dump($amount);
