@@ -3,9 +3,10 @@
 
  require_once '../Transaction.php';
 
+ $class = 'Transaction';
 
  // Classes & Objects
- $amount = (new Transaction(100, 'Transaction 1'))
+ $amount = (new $class(100, 'Transaction 1'))
             ->addTax(8)
             ->applyDiscount(10)
             ->getAmount();
