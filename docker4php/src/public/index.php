@@ -11,4 +11,6 @@
 
  $amount = $transation->getAmount();
 
+ unset($transation);//destructor will be call first
+
  var_dump($amount);
