@@ -30,10 +30,12 @@ $obj->q = 16;
 
 /*Cast to an Object*/
 $arr = [4, 5, 6];
-
+$obj = (object) $arr;
 echo '<br />Cast to an Object: <br />';
-var_dump((object) $arr);
+var_dump($obj);
 
  echo "<pre>";
- print_r($arr);
+ print_r($obj);
  echo "</pre>";
+
+var_dump($obj->{0});//access std class property
