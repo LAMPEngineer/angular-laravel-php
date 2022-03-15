@@ -26,3 +26,14 @@ $obj->q = 16;
  echo "<pre>";
  print_r($obj);
  echo "</pre>";
+
+
+/*Cast to an Object*/
+$arr = [4, 5, 6];
+
+echo '<br />Cast to an Object: <br />';
+var_dump((object) $arr);
+
+ echo "<pre>";
+ print_r($arr);
+ echo "</pre>";
