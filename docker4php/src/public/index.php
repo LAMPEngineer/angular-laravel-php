@@ -9,6 +9,6 @@
             ->addTax(8)
             ->applyDiscount(10);
 
+ $amount = $transation->getAmount();
 
-
- var_dump($transation->getAmount());
+ var_dump($amount);
