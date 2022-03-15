@@ -58,3 +58,12 @@ var_dump($cast);
 
 echo 'Access property:<br />';
 var_dump($cast->scalar);
+
+
+
+
+/*Null value cast to an Object*/
+
+echo '<br /><br />Null value cast to an Object:<br />';
+$cast = (object) null;// empty 
+var_dump($cast);
