@@ -6,7 +6,7 @@
 
  $arr = json_decode($str);
 
- var_dump($arr);
+ var_dump($arr->c);//access std class property
 
  echo "<pre>";
  print_r($arr);
