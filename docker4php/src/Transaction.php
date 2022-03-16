@@ -7,8 +7,8 @@
     /* Constructor property promotion, PHP8.0 */
  	public function __construct(
         private float $amount = 0.0, 
-        private string $description = 'hello'){
-    }
+        private ?string $description = null) // nullable type
+    {}
 
  	public function addTax(float $rate): Transaction 
     {
