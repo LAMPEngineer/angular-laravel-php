@@ -1,16 +1,12 @@
 <?php
  declare(strict_types=1);
 
+ require_once '../PaymentProfile.php';
+ require_once '../Customer.php';
  require_once '../Transaction.php';
 
 
- // Classes & Objects
- $transation = (new Transaction(100, 'Transaction 1'))
-            ->addTax(8)
-            ->applyDiscount(10);
+$transaction = new Transaction(5, 'Test');
 
- $amount = $transation->getAmount();
 
- $transation = null;//destructor will be call first
-
- var_dump($amount);
+echo $transaction->customer?->paymentProfile->id;

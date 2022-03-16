@@ -3,6 +3,7 @@
 
  class Transaction
  {
+    public ?Customer $customer = null;
     
     /* Constructor property promotion, PHP8.0 */
  	public function __construct(
