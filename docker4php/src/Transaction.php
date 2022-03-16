@@ -3,11 +3,14 @@
 
  class Transaction
  {
+    private float $amount; // class property
+
     /* Constructor property promotion, PHP8.0*/
  	public function __construct(
-        private float $amount, 
+        float $amount, 
         private string $description){
-        
+        $this ->amount = $amount; 
+
     }
 
  	public function addTax(float $rate): Transaction 
