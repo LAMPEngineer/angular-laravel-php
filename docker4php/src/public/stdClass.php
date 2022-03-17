@@ -1,5 +1,12 @@
 <?php
 
+ function prettyPrintArray($value){
+      echo '<pre>';
+      print_r($value);
+      echo '</pre>';
+ }
+
+    
  /*JSON decode returns stdClass object*/
  
  $str = '{"a":1,"b":2,"c":3}';
@@ -8,10 +15,7 @@
 
  echo 'JSON decode returns stdClass object: <br /><br />';
  var_dump($arr->c);//access std class property
-
- echo "<pre>";
- print_r($arr);
- echo "</pre>";
+ prettyPrintArray($arr);
 
 
 /*PHP stdClass*/
@@ -23,10 +27,8 @@ $obj->q = 16;
 
  echo '<br />PHP stdClass: <br />';
  var_dump($obj);
+ prettyPrintArray($obj);
 
- echo "<pre>";
- print_r($obj);
- echo "</pre>";
 
 
 /*Cast to an Object*/
@@ -35,10 +37,8 @@ $arr = [4, 5, 6];
 $obj = (object) $arr;
 echo '<br />Cast to an Object: <br />';
 var_dump($obj);
+prettyPrintArray($obj);
 
- echo "<pre>";
- print_r($obj);
- echo "</pre>";
 
 echo 'access stdClass property: <br />';
 var_dump($obj->{2});//access stdClass property
@@ -50,10 +50,7 @@ var_dump($obj->{2});//access stdClass property
 echo '<br /><br />Cast integer to object:<br />';
 $cast = (object) 25;
 var_dump($cast);
-
- echo "<pre>";
- print_r($cast);
- echo "</pre>";
+prettyPrintArray($cast);
 
 
 echo 'Access property:<br />';
