@@ -9,4 +9,4 @@
 $transaction = new Transaction(5, 'Test');
 
 
-echo $transaction->customer?->paymentProfile?->id;
+echo $transaction->customer->paymentProfile->id ?? 'foo <br />';
