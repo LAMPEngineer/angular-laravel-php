@@ -1,5 +1,14 @@
 <?php 
  class Customer
  {
- 	public ?PaymentProfile $paymentProfile = null;
+ 	private ?PaymentProfile $paymentProfile = null;
+
+    /*
+     * @return PaymentProfile|null
+     */
+    public function getPaymentProfile(): ?PaymentProfile
+    {
+        return $this->paymentProfile;
+    }
+
  }
