@@ -5,7 +5,7 @@
 
 # Angular 11.0
 
-# PHP 8.0 
+# PHP 8.1
 
 # MySQL 8.0
 
