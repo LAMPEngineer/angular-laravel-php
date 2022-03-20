@@ -13,6 +13,8 @@
   ## Nginx 1.19-alpine
   
   ## PHP 8.1
+  
+  ## phpMyAdmin
 
 # Test
 
