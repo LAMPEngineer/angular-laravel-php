@@ -19,5 +19,7 @@
 # Test
 
 ## core
+
 ## bootstrap
-## html (js + css)
+
+## html + javascript + jQuery + css
