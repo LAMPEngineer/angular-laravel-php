@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PaymentGateway\Paddle;
+//namespace PaymentGateway\Paddle;
 
 class Transaction
 {

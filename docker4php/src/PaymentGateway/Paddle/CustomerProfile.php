@@ -1,6 +1,6 @@
 <?php
  
- namespace PaymentGateway\Paddle;
+ //namespace PaymentGateway\Paddle;
 
  class CustomerProfile
  {
