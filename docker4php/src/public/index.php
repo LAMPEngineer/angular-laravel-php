@@ -7,5 +7,9 @@
 
 
  use PaymentGateway\Paddle\Transaction;
+ use PaymentGateway\Stripe\Transaction as StripeTransaction;
 
- var_dump(new Transaction());
+ $paddleTransaction = new Transaction();
+ $stripeTransaction = new StripeTransaction();
+
+ var_dump($paddleTransaction, $stripeTransaction);
