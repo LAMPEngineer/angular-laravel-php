@@ -6,10 +6,13 @@
 
 
 
- use PaymentGateway\Paddle\Transaction;
+ use PaymentGateway\Paddle\{Transaction, CustomerProfile};
  use PaymentGateway\Stripe\Transaction as StripeTransaction;
+
 
  $paddleTransaction = new Transaction();
  $stripeTransaction = new StripeTransaction();
+ $paddleCustomerProfile = new CustomerProfile();
 
- var_dump($paddleTransaction, $stripeTransaction);
+
+ var_dump($paddleCustomerProfile, $paddleTransaction, $stripeTransaction);
