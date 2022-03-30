@@ -1,16 +1,14 @@
 <?php
 
- spl_autoload_register(function($class){
+ require __DIR__ . '/../vendor/autoload.php';
 
-     $path = __DIR__ . '/../' . lcfirst( str_replace('\\', '/', $class)) . '.php';
+use \App\PaymentGateway\Paddle\Transaction;
+use Ramsey\Uuid\UuidFactory;
 
-     require $path;
- });
+$paddleTransaction = new Transaction();
 
+$id = new UuidFactory();
 
+echo $id->uuid4();
 
- use \App\PaymentGateway\Paddle\Transaction;
-
- $paddleTransaction = new Transaction();
-
- var_dump($paddleTransaction);
+var_dump($paddleTransaction);
