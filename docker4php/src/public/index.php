@@ -6,4 +6,4 @@ require __DIR__ . '/../vendor/autoload.php';
 
 $paddleTransaction = new Transaction();
 
-echo $paddleTransaction::STATUS_PAID;
+//echo $paddleTransaction::STATUS_PAID;
