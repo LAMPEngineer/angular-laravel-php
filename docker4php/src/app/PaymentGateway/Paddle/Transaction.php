@@ -13,9 +13,7 @@ class Transaction
   
   public function __construct()
   {
-      var_dump(Transaction::STATUS_PAID);
-      var_dump(self::STATUS_PAID);
-      var_dump($this::STATUS_PAID);
+      var_dump(self::STATUS_PAID);      
   }
 
 
