@@ -14,7 +14,8 @@
   
   ## PHP 8.1
   
-  ## phpMyAdmin
+  ## composer
+ 
 
 # Test
 
