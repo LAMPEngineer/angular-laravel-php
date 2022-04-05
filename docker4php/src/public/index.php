@@ -16,3 +16,7 @@ $transaction = new Transaction(25, 'Transaction 1');
 //var_dump($transaction);
 
 $db = DB::getInstance([]);
+$db = DB::getInstance([]);
+$db = DB::getInstance([]);
+$db = DB::getInstance([]);
+$db = DB::getInstance([]);
