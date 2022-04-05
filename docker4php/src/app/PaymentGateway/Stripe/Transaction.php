@@ -11,7 +11,9 @@ class Transaction
     public function __construct(
         public float $amount,
         public string $description
-    ){}
+    ){
+        self::$count++;
+    }
 
     public function process()
     {
