@@ -3,6 +3,5 @@
 - **[PHP 8.1](https://hub.docker.com/layers/php/library/php/8.1.0-fpm/images/sha256-001281a0eb6140b0e5096664d785abd6e6d2921316d002c1d912867725076299?context=explore)**
 - **[phpMyAdm](https://hub.docker.com/r/phpmyadmin/phpmyadmin/)**
 - **[Composer 2.1.6](https://getcomposer.org/)**
+- **[ramsey/uuid 4.3](https://uuid.ramsey.dev/en/4.3.0/)**
 - **[]()**
-- **[]()**
-
