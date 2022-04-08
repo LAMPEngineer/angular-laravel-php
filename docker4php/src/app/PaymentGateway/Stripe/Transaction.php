@@ -11,13 +11,9 @@ class Transaction
         private float $amount
     ){}
 
-    // getters & setters
+    // getter
     public function getAmount(): float {
          return $this->amount;
-    }
-
-    public function setAmount(float $amount){
-        $this->amount = $amount;
     }
 
     public function process()
