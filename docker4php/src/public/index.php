@@ -1,13 +1,13 @@
 <?php
 
 use App\PaymentGateway\Stripe\Transaction;
-use App\DB;
+
 
 require __DIR__ . '/../vendor/autoload.php';
 
 
+$transaction = new Transaction(25);
 
-$transaction = new Transaction(25, 'Transaction 1');
+$transaction->amount = 125; // this changes the process
 
-
-$db = DB::getInstance([]);
+$transaction->process();

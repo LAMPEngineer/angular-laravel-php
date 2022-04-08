@@ -6,23 +6,16 @@ namespace App\PaymentGateway\Stripe;
 
 class Transaction
 {
-    private static int $count = 0;
-    
+        
     public function __construct(
-        public float $amount,
-        public string $description
-    ){
-        self::$count++;
-    }
+        public float $amount
+    ){}
 
-    public static function getCount(): int
-    {
-        return self::$count;
-    }
+
 
     public function process()
     {
-        echo 'Processing stripe transection...';
+        echo 'Processing $' . $this->amount . ' transaction';
     }
 
 }
