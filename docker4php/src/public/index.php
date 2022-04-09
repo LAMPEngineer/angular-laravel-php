@@ -15,4 +15,4 @@ $toaster->addSlice('bread');
 $toaster->addSlice('bread');
 $toaster->addSlice('bread');
 
-$toaster->toast();
+$toaster->toastBagel();
