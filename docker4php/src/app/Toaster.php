@@ -4,8 +4,14 @@
 
  class Toaster
  {
-     protected array $slices = [];
-     protected int $size = 2;
+    protected array $slices;
+    protected int $size;
+
+     public function __construct(){
+
+         $this->slices = [];
+         $this->size = 2;
+     }
 
      public function addSlice(string $slice): void
      {

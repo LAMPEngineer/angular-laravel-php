@@ -4,8 +4,15 @@
 
  class ToasterPro extends Toaster
  {
-     protected int $size = 4;
+    protected int $size;
 
+     public function __construct(){
+         
+        parent::__construct();
+
+         $this->size = 4;
+         
+     }
  
      public function toastBagel()
      {
