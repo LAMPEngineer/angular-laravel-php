@@ -4,7 +4,7 @@
 
  class ToasterPro extends Toaster
  {
-     public int $size = 4;
+     protected int $size = 4;
 
  
      public function toastBagel()
