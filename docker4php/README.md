@@ -4,4 +4,6 @@
 - **[phpMyAdm](https://hub.docker.com/r/phpmyadmin/phpmyadmin/)**
 - **[Composer 2.1.6](https://getcomposer.org/)**
 - **[ramsey/uuid 4.3](https://uuid.ramsey.dev/en/4.3.0/)**
+- **[Autoload PSR-4](https://www.php-fig.org/psr/psr-4/)**
+- **[]()**
 - **[]()**
