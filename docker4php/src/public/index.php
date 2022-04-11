@@ -9,10 +9,10 @@ require __DIR__ . '/../vendor/autoload.php';
 
 $toaster = new ToasterPro();
 
-$toaster->addSlice('bread');
-$toaster->addSlice('bread');
-$toaster->addSlice('bread');
-$toaster->addSlice('bread');
-$toaster->addSlice('bread');
+$toaster->addSlice('bread 1');
+$toaster->addSlice('bread 2');
+$toaster->addSlice('bread 3');
+$toaster->addSlice('bread 4');
+$toaster->addSlice('bread 5');
 
 $toaster->toastBagel();

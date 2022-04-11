@@ -13,6 +13,11 @@
          $this->size = 4;
          
      }
+
+     public function addSlice(string $slice): void
+     {
+         parent::addSlice($slice);
+     }
  
      public function toastBagel()
      {
