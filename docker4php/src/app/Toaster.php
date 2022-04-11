@@ -7,7 +7,7 @@
     protected array $slices;
     protected int $size;
 
-     public function __construct(){
+     public function __construct(string $x){
 
          $this->slices = [];
          $this->size = 2;

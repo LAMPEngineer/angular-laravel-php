@@ -6,9 +6,9 @@
  {
     protected int $size;
 
-     public function __construct(){
+     public function __construct(int $y){
          
-        parent::__construct();
+        parent::__construct('foo');
 
          $this->size = 4;
          
