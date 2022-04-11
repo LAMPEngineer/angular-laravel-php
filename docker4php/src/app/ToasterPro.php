@@ -6,17 +6,17 @@
  {
     protected int $size;
 
-     public function __construct(int $y){
+     public function __construct(){
          
-        parent::__construct('foo');
+        parent::__construct();
 
          $this->size = 4;
          
      }
 
-     public function addSlice(string $slice): void
+     public function addSlice(string $sliceX): void
      {
-         parent::addSlice($slice);
+         parent::addSlice($sliceX);
      }
  
      public function toastBagel()
