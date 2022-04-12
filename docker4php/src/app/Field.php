@@ -8,6 +8,6 @@
          protected string $name
      ){}
 
-     abstract public function render(): string;
+     abstract protected function render(): string;
 
  }
