@@ -1,18 +1,22 @@
 <?php
 
-use App\ToasterPro;
 use App\Toaster;
-use App\PaymentGateway\Stripe\Transaction;
+use App\ToasterPro;
+use App\FancyOven;
 
 
 require __DIR__ . '/../vendor/autoload.php';
 
 $toaster = new ToasterPro();
 
-$toaster->addSlice(sliceX: 'bread 1');
-$toaster->addSlice(sliceX:'bread 2');
-$toaster->addSlice(sliceX:'bread 3');
-$toaster->addSlice(sliceX:'bread 4');
-$toaster->addSlice(sliceX:'bread 5');
 
-$toaster->toastBagel();
+$toaster->addSlice('bread 1');
+$toaster->addSlice('bread 2');
+$toaster->addSlice('bread 3');
+$toaster->addSlice('bread 4');
+$toaster->addSlice('bread 5');
+
+
+//dependency injection for composition
+$fancyOven = new FancyOven($toaster);
+$fancyOven->toastBagel();

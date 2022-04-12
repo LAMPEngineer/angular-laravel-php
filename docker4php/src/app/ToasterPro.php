@@ -14,9 +14,9 @@
          
      }
 
-     public function addSlice(string $sliceX): void
+     public function addSlice(string $slice): void
      {
-         parent::addSlice($sliceX);
+         parent::addSlice($slice);
      }
  
      public function toastBagel()
