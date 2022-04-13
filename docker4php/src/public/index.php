@@ -2,13 +2,6 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$fields = [
-    new \App\Text('textField'),
-    new \App\Checkbox('checkboxField'),
-    new \App\Radio('radioField'),
-];
+$collector = new \App\CollectionAgency();
 
-
-foreach ($fields as $field) {
-    echo $field->render() . '<br />';
-}
+echo $collector->collect(100) . PHP_EOL;

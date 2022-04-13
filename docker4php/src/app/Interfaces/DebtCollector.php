@@ -2,9 +2,8 @@
 
 namespace App\Interfaces;
 
-interface DebtCollector extends AnotherInterface, SomeOtherInterface
+interface DebtCollector 
 {
-    public function __construct();
     public function collect(float $owedAmount): float;
 
 }
