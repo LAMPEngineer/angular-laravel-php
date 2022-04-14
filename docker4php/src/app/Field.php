@@ -1,13 +1,16 @@
 <?php
 
- namespace App;
 
- abstract class Field
+namespace App;
+
+use App\Interfaces\Randerable;
+
+ abstract class Field implements Randerable
  {
      public function __construct(
          protected string $name
      ){}
 
-     abstract protected function render(): string;
+     abstract public function render(): string;
 
  }
