@@ -21,9 +21,13 @@ class Invoice
         return null;
     }
 
-    // public function __set(string $name, $value)
-    // {
-    //     var_dump($name, $value);
-    // }
+
+    public function __set(string $name, $value)
+    {
+        if(property_exists($this, $name)){
+            $this->$name = $value;
+        }
+    }
+    
 
 }
