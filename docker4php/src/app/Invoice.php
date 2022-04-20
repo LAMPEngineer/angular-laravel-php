@@ -4,16 +4,26 @@ namespace App;
 
 class Invoice
 {
-    private float $amount;
+    protected float $amount;
+
+    public function __construct(float $amount)
+    {
+        $this->amount = $amount;
+    }
+
 
     public function __get(string $name)
     {
-        var_dump($name);
+        if(property_exists($this, $name)){
+            return $this->$name;
+        }
+
+        return null;
     }
 
-    public function __set(string $name, $value)
-    {
-        var_dump($name, $value);
-    }
+    // public function __set(string $name, $value)
+    // {
+    //     var_dump($name, $value);
+    // }
 
 }
