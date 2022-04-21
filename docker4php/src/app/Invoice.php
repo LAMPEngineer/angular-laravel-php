@@ -4,30 +4,59 @@ namespace App;
 
 class Invoice
 {
-    protected float $amount;
-
-    public function __construct(float $amount)
-    {
-        $this->amount = $amount;
-    }
+    protected array $data = [];
 
 
+   /* 
+    * This is utilized for reading data from inaccessible
+    * (protected or private) or non-existing properties.
+    *
+    */
     public function __get(string $name)
     {
-        if(property_exists($this, $name)){
-            return $this->$name;
+        if(array_key_exists($name, $this->data)){
+            return $this->data[$name];
         }
 
         return null;
     }
 
 
-    public function __set(string $name, $value)
+
+   /* 
+    * This is run when writing data to inaccessible 
+    * (protected or private) or non-existing properties.
+    *
+    */
+    public function __set(string $name, $value): void
     {
-        if(property_exists($this, $name)){
-            $this->$name = $value;
-        }
+        
+        $this->data[$name] = $value;
+        
     }
-    
+
+
+   /* 
+    * This is triggered by calling isset() or empty() on inaccessible 
+    * (protected or private) or non-existing properties.
+    */
+    public function __isset(string $name): bool
+    {
+        var_dump('isset');
+        return array_key_exists($name, $this->data);
+    }
+
+
+
+   /* 
+    * This is invoked when unset() is used on inaccessible 
+    * (protected or private) or non-existing properties.
+    */
+    public function __unset(string $name): void
+    {
+        var_dump('unset');
+        unset($this->data[$name]);
+    }
+
 
 }

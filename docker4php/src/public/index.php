@@ -2,8 +2,10 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$invoice = new App\Invoice(15);
+$invoice = new App\Invoice();
 
-$invoice->amount = 35;
+$invoice->amount = 15;
 
-echo $invoice->amount . PHP_EOL;
+var_dump(isset($invoice->amount));
+
+unset($invoice->amount);
