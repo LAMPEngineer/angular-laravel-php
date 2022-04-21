@@ -6,6 +6,8 @@ $invoice = new App\Invoice();
 
 $invoice->amount = 15;
 
-var_dump(isset($invoice->amount));
+var_dump($invoice);
 
 unset($invoice->amount);
+
+var_dump($invoice);
