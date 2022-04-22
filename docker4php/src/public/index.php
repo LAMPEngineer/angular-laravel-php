@@ -4,10 +4,5 @@ require __DIR__ . '/../vendor/autoload.php';
 
 $invoice = new App\Invoice();
 
-$invoice->amount = 15;
+$invoice->process(1, 2, 3);
 
-var_dump($invoice);
-
-unset($invoice->amount);
-
-var_dump($invoice);
