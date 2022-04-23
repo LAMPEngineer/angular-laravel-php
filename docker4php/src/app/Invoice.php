@@ -5,7 +5,7 @@ namespace App;
 class Invoice
 {
     /* user method */
-    public function process()
+    protected function process()
     {
         var_dump('process');
     }
