@@ -4,6 +4,12 @@ namespace App;
 
 class Invoice
 {
+    /* user method */
+    public function process()
+    {
+        var_dump('process');
+    }
+
     /* magic method __call */
     public function __call(string $name, array $arguments)
     {
