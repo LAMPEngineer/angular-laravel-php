@@ -5,12 +5,14 @@ namespace App;
 class Invoice
 {
     /* user method */
-    protected function process(float $amount, $description)
+    protected static function process($description)
     {
-        var_dump($amount, $description);
+        var_dump($description);
     }
 
-    /* magic method __call */
+    /* magic method __call 
+     * triggered when invoking inaccessible methods in an object context.
+     */
     public function __call(string $name, array $arguments)
     {
         if(method_exists($this, $name)) {
@@ -18,10 +20,12 @@ class Invoice
         }
     }
 
-    /* magic method __callStatis */
+    /* magic method __callStatis 
+     *  triggered when invoking inaccessible methods in a static context.
+     */
     public static function __callStatic(string $name, array $arguments)
-    {
-        var_dump('static', $name, $arguments);
+    { 
+        return self::$name($arguments);
 
     }
 
