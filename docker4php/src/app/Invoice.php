@@ -4,47 +4,16 @@ namespace App;
 
 class Invoice
 {
-    /* user method */
-    protected static function process($description)
+    private float $amount;
+    private int $id = 1234;
+    private string $accountNumber = 'abc12345678';
+
+    public function __debugInfo(): ?array
     {
-        var_dump($description);
+       return [
+           'id' => $this->id,
+           'accountNumber' => '****' . substr($this->accountNumber, -4)
+       ];
     }
 
-    /* magic method __call 
-     * triggered when invoking inaccessible methods in an object context.
-     */
-    public function __call(string $name, array $arguments)
-    {
-        if(method_exists($this, $name)) {
-            call_user_func_array([$this, $name], $arguments);
-        }
-    }
-
-    /* magic method __callStatis 
-     *  triggered when invoking inaccessible methods in a static context.
-     */
-    public static function __callStatic(string $name, array $arguments)
-    { 
-        return self::$name($arguments);
-
-    }
-
-    /* magic method __toString
-     *  allows a class to decide how it will react when 
-     * it is treated like a string
-     */
-    public function __toString(): string
-    {
-        return 'This invoice is processed.' . PHP_EOL;
-    }
-
-
-    /* magic method __invoke 
-     *  triggered when a script tries to call an object as a function
-     */
-    public function __invoke()
-    {
-        var_dump('invoked');
-    }
-    
 }
