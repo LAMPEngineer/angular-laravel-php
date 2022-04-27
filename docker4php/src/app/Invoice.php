@@ -29,4 +29,13 @@ class Invoice
 
     }
 
+    /* magic method __toString
+     *  allows a class to decide how it will react when 
+     * it is treated like a string
+     */
+    public function __toString(): string
+    {
+        return 'This invoice is processed.' . PHP_EOL;
+    }
+
 }
