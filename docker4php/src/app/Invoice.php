@@ -38,4 +38,13 @@ class Invoice
         return 'This invoice is processed.' . PHP_EOL;
     }
 
+
+    /* magic method __invoke 
+     *  triggered when a script tries to call an object as a function
+     */
+    public function __invoke()
+    {
+        var_dump('invoked');
+    }
+    
 }
