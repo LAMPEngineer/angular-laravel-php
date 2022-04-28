@@ -3,6 +3,8 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$invoice = new App\Invoice();
+$classA = new App\ClassA();
+$classB = new App\ClassB();
 
-var_dump($invoice);
+echo $classA->getName() . PHP_EOL;
+echo $classB->getName() . PHP_EOL;
