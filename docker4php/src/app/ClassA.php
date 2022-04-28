@@ -8,6 +8,7 @@ class ClassA
 
     public function getname(): string
     {
+        var_dump(get_class($this));
         return $this->name;
     }
 }
