@@ -4,11 +4,10 @@ namespace App;
 
 class ClassA
 {
-    protected string $name = 'A';
+    protected static string $name = 'A';
 
-    public function getname(): string
+    public static function getname(): string
     {
-        var_dump(get_class($this));
-        return $this->name;
+        return self::$name;
     }
 }
