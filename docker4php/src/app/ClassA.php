@@ -8,6 +8,6 @@ class ClassA
 
     public static function getname(): string
     {
-        return self::$name;
+        return static::$name;
     }
 }
