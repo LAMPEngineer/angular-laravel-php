@@ -6,7 +6,7 @@ class ClassA
 {
     protected static string $name = 'A';
 
-    public static function getname(): string
+    public function getname(): string
     {
         return static::$name;
     }
