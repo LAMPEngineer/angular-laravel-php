@@ -10,4 +10,9 @@ class ClassA
     {
         return static::$name;
     }
+
+    public static function make(): static
+    {
+        return new static();
+    }
 }
