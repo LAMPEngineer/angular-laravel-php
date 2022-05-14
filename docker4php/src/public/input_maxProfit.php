@@ -11,10 +11,25 @@
 
 function maximumProfit($inventory, $order) {
     // Write your code here
+    $sum = 0;
+    for($i=0; $i < $order; $i++){
+
+        $maxs = array_keys($inventory, max($inventory));
+        $highestIndex = (int)$maxs[0];
+        $sum += $inventory[$highestIndex];
+        $inventory[$highestIndex] = $inventory[$highestIndex] - 1;
+
+    }
+
+    return $sum;
 
 }
 
-$fptr = fopen(getenv("OUTPUT_PATH"), "w");
+$inventory = [10, 10, 10, 10, 10];
+$order = 50;
+echo 'MaxProfit= ' . maximumProfit($inventory, $order) . PHP_EOL;
+
+/* $fptr = fopen(getenv("OUTPUT_PATH"), "w");
 
 $inventory_count = intval(trim(fgets(STDIN)));
 
@@ -31,4 +46,4 @@ $result = maximumProfit($inventory, $order);
 
 fwrite($fptr, $result . "\n");
 
-fclose($fptr);
+fclose($fptr); */
