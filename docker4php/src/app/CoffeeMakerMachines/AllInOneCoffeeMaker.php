@@ -4,7 +4,14 @@
 
  class AllInOneCoffeeMaker extends CoffeeMaker
  {
+    
     use LatteTrait;
-    use CappuchinoTrait;
+
+    use CappuchinoTrait{
+        # conflict resolution
+        CappuchinoTrait::makeLatte insteadof LatteTrait;
+    }
+
+    
 
  }

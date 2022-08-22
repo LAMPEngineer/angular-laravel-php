@@ -10,8 +10,14 @@ trait CappuchinoTrait
     }
 
     # This mathod get precedence over base class method
-    public function makeCoffee()
+/*     public function makeCoffee()
     {
         echo static::class . ' Making Coffeee(UPDATED)' . PHP_EOL;
+    } */
+
+
+    public function makeLatte()
+    {
+        echo static::class . ' is making latte (Cappuchino Trait)' . PHP_EOL;
     }
 }
