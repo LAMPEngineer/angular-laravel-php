@@ -7,11 +7,6 @@
     
     use LatteTrait;
 
-    use CappuchinoTrait{
-        # conflict resolution
-        CappuchinoTrait::makeLatte insteadof LatteTrait;
-    }
-
-    
+    use CappuchinoTrait;
 
  }

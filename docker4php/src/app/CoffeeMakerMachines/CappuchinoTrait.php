@@ -4,7 +4,7 @@ namespace App\CoffeeMakerMachines;
 
 trait CappuchinoTrait
 {
-    public function makeCappuchino()
+    private function makeCappuchino()
     {
         echo static::class . ' is making cappuchino'. PHP_EOL;
     }
@@ -16,8 +16,8 @@ trait CappuchinoTrait
     } */
 
 
-    public function makeLatte()
+/*     public function makeLatte()
     {
         echo static::class . ' is making latte (Cappuchino Trait)' . PHP_EOL;
-    }
+    } */
 }
