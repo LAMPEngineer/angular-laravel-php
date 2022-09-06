@@ -16,8 +16,8 @@ class TagParserTest extends TestCase
         $this->parser = new TagParser;
     }
 
-    // person
-    public function test_it_parses_a_string_tag()
+    /** @test */  
+    public function it_parses_a_string_tag()
     {
         /* The 3A's => Arrange, Act, Assert */
 
